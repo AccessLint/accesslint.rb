@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+$: << File.expand_path("../../lib/", __FILE__)
+
 Signal.trap("INT") { exit 1 } #
 
 require 'access_lint'
