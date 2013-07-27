@@ -17,7 +17,7 @@ Or install it yourself as:
 
 ## Usage
 
-    $ axsl foo.html
+    $ access_lint audit http://localhost:3000/
 
 ## Contributing
 
