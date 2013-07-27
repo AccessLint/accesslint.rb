@@ -1,6 +1,5 @@
 # AccessLint
-
-TODO: Write a gem description
+Command line runner for Google Accessibility Developer Tools.
 
 ## Installation
 
@@ -18,7 +17,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ axsl foo.html
 
 ## Contributing
 

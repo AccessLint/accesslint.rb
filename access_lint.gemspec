@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = AccessLint::VERSION
   spec.authors       = ["Cameron Cundiff"]
   spec.email         = ["ckundo@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Run an accessibility audit on a file or URL from the command line.}
+  spec.summary       = %q{AccessLint runs Google Accessibility Developer Tools assertions on a page via PhantomJS}
+  spec.homepage      = "https://github.com/ckundo/access_lint"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
