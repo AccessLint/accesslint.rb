@@ -1,0 +1,3 @@
+[submodule "vendor/accessibility-developer-tools"]
+	path = vendor/accessibility-developer-tools
+	url = https://github.com/GoogleChrome/accessibility-developer-tools.git
