@@ -1,3 +1,9 @@
 [submodule "vendor/accessibility-developer-tools"]
 	path = vendor/accessibility-developer-tools
 	url = https://github.com/GoogleChrome/accessibility-developer-tools.git
+[submodule "access-lint"]
+	path = access-lint
+	url = https://github.com/ckundo/access-lint.git
+[submodule "vendor/access-lint"]
+	path = vendor/access-lint
+	url = https://github.com/ckundo/access-lint.git
