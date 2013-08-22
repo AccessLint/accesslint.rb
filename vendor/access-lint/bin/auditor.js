@@ -10,7 +10,7 @@ if (system.args.length !== 2) {
   url = system.args[1];
   page.open(url, function (status) {
     if (status === 'success') {
-      page.injectJs('../vendor/google-chrome/axs_testing.js');
+      page.injectJs('../../google-chrome/accessibility-developer-tools/gen/axs_testing.js');
       var report = page.evaluate(function() {
         var results = axs.Audit.run();
         return axs.Audit.createReport(results);

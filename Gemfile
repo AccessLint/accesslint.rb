@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
+  gem "vendorer"
   gem "rspec"
   gem "pry"
   gem "pry-stack_explorer"

@@ -1,0 +1,6 @@
+folder 'vendor/google-chrome/accessibility-developer-tools' do
+  from 'https://github.com/GoogleChrome/accessibility-developer-tools.git' do |checkout_location|
+    file 'README.md'
+    folder 'gen'
+  end
+end
