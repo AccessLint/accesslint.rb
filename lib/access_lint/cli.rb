@@ -1,11 +1,10 @@
 require 'thor'
 
 module AccessLint
-  class CLI < Thor::Group
-    desc 'Run an accessibility audit on a target file or url.'
-    argument :target
-    def audit
-      puts Audit.new(target).run
+  class CLI < Thor
+    desc 'audit', 'audit TARGET RULE_SET_NAME'
+    def audit(target, rule_set_name)
+      puts Audit.new(target).run(rule_set_name)
     end
   end
 end

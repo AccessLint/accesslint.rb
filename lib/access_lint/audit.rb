@@ -1,21 +1,23 @@
 require 'access_lint'
+require 'yaml'
 
 module AccessLint
   class Audit
-    RUNNER_PATH = File.expand_path("../../../vendor/access-lint/bin/auditor.js", __FILE__)
-
     def initialize(target)
       @target = target
     end
 
-    def run
-      create_report
+    def run(rule_set_name)
+      `#{runner_command_for(rule_set_name)} #{@target}`
     end
 
     private
 
-    def create_report
-      %x( phantomjs #{RUNNER_PATH} #{@target})
+    def runner_command_for(rule_set_name)
+      configuration = YAML.load_file(
+        File.expand_path('../../../config/rule_sets.yml', __FILE__)
+      )
+      configuration['rule_sets'].fetch(rule_set_name.to_s)['runner_command']
     end
   end
 end
