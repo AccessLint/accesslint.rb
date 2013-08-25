@@ -4,3 +4,6 @@ folder 'vendor/google-chrome/accessibility-developer-tools' do
     folder 'gen'
   end
 end
+
+folder 'vendor/squizlabs', 'https://github.com/squizlabs/HTML_CodeSniffer.git'
+
