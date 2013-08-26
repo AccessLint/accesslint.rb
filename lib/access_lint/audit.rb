@@ -19,10 +19,11 @@ module AccessLint
       )
       runner = configuration['rule_sets'].fetch(rule_set_name.to_s)['runner']
       path = File.expand_path(File.join('../../..', runner.fetch('filepath')), __FILE__)
+      directory = File.dirname(path)
       arguments = runner.fetch('additional_arguments') || {}
       arguments = arguments.values.any? ? arguments.values.join(' ') : ''
 
-      "phantomjs #{path} #{@target} #{arguments}"
+      "cd #{directory} && phantomjs #{path} #{@target} #{arguments}"
     end
   end
 end
