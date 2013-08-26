@@ -23,7 +23,7 @@ module AccessLint
       arguments = runner.fetch('additional_arguments') || {}
       arguments = arguments.values.any? ? arguments.values.join(' ') : ''
 
-      "cd #{directory} && phantomjs #{path} #{@target} #{arguments}"
+      "phantomjs #{path} #{@target} #{arguments}"
     end
   end
 end

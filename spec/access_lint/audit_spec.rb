@@ -9,7 +9,7 @@ module AccessLint
       let(:audit) { Audit.new(target) }
 
       it 'loads the rule set' do
-        audit.should_receive(:`).with(/^cd.*phantomjs.*/)
+        audit.should_receive(:`).with(/^phantomjs.*/)
         audit.run(rule_set_name)
       end
 
