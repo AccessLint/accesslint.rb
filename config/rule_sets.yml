@@ -2,13 +2,11 @@ rule_sets:
   google_accessibility_developer_tools:
     name: 'Google Accessibility Developer Tools'
     runner:
-      directory: 'vendor/access-lint/bin/'
-      filename: 'auditor.js'
+      filepath: 'vendor/access-lint/bin/auditor.js'
       additional_arguments:
   html_code_sniffer:
     name: 'HTML CodeSniffer'
     runner:
-      directory: 'vendor/squizlabs/PhantomJS/'
-      filename: 'HTMLCS_Run.js'
+      filepath: 'vendor/squizlabs/PhantomJS/HTMLCS_Run.js'
       additional_arguments:
         0: 'WCAG2AA'

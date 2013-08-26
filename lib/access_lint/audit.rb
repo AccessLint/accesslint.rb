@@ -18,8 +18,7 @@ module AccessLint
         File.expand_path('../../../config/rule_sets.yml', __FILE__)
       )
       runner = configuration['rule_sets'].fetch(rule_set_name.to_s)['runner']
-      directory = runner.fetch('directory')
-      path = File.expand_path(runner.fetch('filename'), directory)
+      path = File.expand_path(File.join('../../..', runner.fetch('filepath')), __FILE__)
       arguments = runner.fetch('additional_arguments') || {}
       arguments = arguments.values.any? ? arguments.values.join(' ') : ''
 
