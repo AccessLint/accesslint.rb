@@ -11,31 +11,13 @@ if (system.args.length !== 2) {
     if (status === 'success') {
       page.injectJs('../../google-chrome/accessibility-developer-tools/gen/axs_testing.js');
       var report = page.evaluate(function() {
-        var configuration = new axs.AuditConfiguration();
-        var rules = [
-          'audioWithoutControls',
-          'badAriaAttributeValue',
-          'badAriaRole',
-          'controlsWithoutLabel',
-          'focusableElementNotVisibleAndNotAriaHidden',
-          'imagesWithoutAltText',
-          'linkWithUnclearPurpose',
-          'lowContrastElements',
-          'elementsWithMeaningfulBackgroundImage',
-          'nonExistentAriaLabelledbyElement',
-          'pageWithoutTitle',
-          'requiredAriaAttributeMissing',
-          'unfocusableElementsWithOnClick',
-          'videoWithoutCaptions'
-        ];
-        configuration.auditRulesToRun(rules);
-        var results = axs.Audit.run(configuration);
+        var results = axs.Audit.run();
         return axs.Audit.createReport(results);
       });
       console.log(report);
       phantom.exit();
     } else {
-      console.log('Failed to load the page at ' + 
+      console.log('Failed to load the page at ' +
         url +
         ". Status was: " +
         status
