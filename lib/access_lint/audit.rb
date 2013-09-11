@@ -3,7 +3,9 @@ require 'yaml'
 
 module AccessLint
   class Audit
-    def initialize(target)
+    RUNNER_PATH = File.expand_path("../../../vendor/access-lint/bin/auditor.js", __FILE__)
+
+    def initialize(target, options={})
       @target = target
     end
 
@@ -13,7 +15,7 @@ module AccessLint
 
     private
 
-    def command_for(rule_set_name)
+    def command_for(rule_set_name=:google_accessibility_developer_tools)
       configuration = YAML.load_file(
         File.expand_path('../../../config/rule_sets.yml', __FILE__)
       )
@@ -23,7 +25,7 @@ module AccessLint
       arguments = runner.fetch('additional_arguments') || {}
       arguments = arguments.values.any? ? arguments.values.join(' ') : ''
 
-      "cd #{directory} && phantomjs #{path} #{@target} #{arguments}"
+      "phantomjs #{RUNNER_PATH} #{@target} #{arguments}"
     end
   end
 end

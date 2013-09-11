@@ -1,4 +1,3 @@
-// do stuff
 var page = require('webpage').create(),
     system = require('system'),
     url;
@@ -12,7 +11,25 @@ if (system.args.length !== 2) {
     if (status === 'success') {
       page.injectJs('../../google-chrome/accessibility-developer-tools/gen/axs_testing.js');
       var report = page.evaluate(function() {
-        var results = axs.Audit.run();
+        var configuration = new axs.AuditConfiguration();
+        var rules = [
+          'audioWithoutControls',
+          'badAriaAttributeValue',
+          'badAriaRole',
+          'controlsWithoutLabel',
+          'focusableElementNotVisibleAndNotAriaHidden',
+          'imagesWithoutAltText',
+          'linkWithUnclearPurpose',
+          'lowContrastElements',
+          'elementsWithMeaningfulBackgroundImage',
+          'nonExistentAriaLabelledbyElement',
+          'pageWithoutTitle',
+          'requiredAriaAttributeMissing',
+          'unfocusableElementsWithOnClick',
+          'videoWithoutCaptions'
+        ];
+        configuration.auditRulesToRun(rules);
+        var results = axs.Audit.run(configuration);
         return axs.Audit.createReport(results);
       });
       console.log(report);
