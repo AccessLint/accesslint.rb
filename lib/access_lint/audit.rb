@@ -10,7 +10,7 @@ module AccessLint
       @target = target
     end
 
-    def run(rule_set_name=:google_accessibility_developer_tools)
+    def run(rule_set_name)
       `#{command_for(rule_set_name)}`
     end
 

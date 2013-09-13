@@ -4,7 +4,7 @@ rule_sets:
     runner:
       filepath: 'vendor/access-lint/bin/auditor.js'
       additional_arguments:
-  html_code_sniffer:
+  html_codesniffer:
     name: 'HTML CodeSniffer'
     runner:
       filepath: 'vendor/squizlabs/PhantomJS/HTMLCS_Run.js'
