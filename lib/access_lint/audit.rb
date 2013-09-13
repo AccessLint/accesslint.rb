@@ -4,6 +4,7 @@ require 'yaml'
 module AccessLint
   class Audit
     RUNNER_PATH = File.expand_path("../../../vendor/access-lint/bin/auditor.js", __FILE__)
+    HTML_CS_PATH = File.expand_path("../../../vendor/squizlabs/PhantomJS", __FILE__)
 
     def initialize(target)
       @target = target
@@ -25,7 +26,11 @@ module AccessLint
       arguments = runner.fetch('additional_arguments') || {}
       arguments = arguments.values.any? ? arguments.values.join(' ') : ''
 
-      "phantomjs #{RUNNER_PATH} #{@target} #{arguments}"
+      if rule_set_name == :html_codesniffer
+        "cd #{HTML_CS_PATH} && phantomjs HTMLCS_Run.js #{@target} #{arguments}"
+      else
+        "phantomjs #{RUNNER_PATH} #{@target} #{arguments}"
+      end
     end
   end
 end
