@@ -1,8 +1,5 @@
 folder 'vendor/google-chrome/accessibility-developer-tools' do
-  from 'https://github.com/GoogleChrome/accessibility-developer-tools.git' do |checkout_location|
-    file 'README.md'
-    folder 'gen'
-  end
+  file 'gen/axs_testing.js', 'https://raw.github.com/GoogleChrome/accessibility-developer-tools/stable/dist/js/axs_testing.js'
 end
 
 folder 'vendor/squizlabs', 'https://github.com/squizlabs/HTML_CodeSniffer.git'

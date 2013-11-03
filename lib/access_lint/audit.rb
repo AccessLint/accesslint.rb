@@ -26,7 +26,7 @@ module AccessLint
       arguments = runner.fetch('additional_arguments') || {}
       arguments = arguments.values.any? ? arguments.values.join(' ') : ''
 
-      if rule_set_name == :html_codesniffer
+      if rule_set_name == 'html_codesniffer'
         "cd #{HTML_CS_PATH} && phantomjs HTMLCS_Run.js #{@target} #{arguments}"
       else
         "phantomjs #{RUNNER_PATH} #{@target} #{arguments}"
