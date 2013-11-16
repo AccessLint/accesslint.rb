@@ -1,5 +1,5 @@
 require 'access_lint'
-require 'yaml'
+require 'json'
 
 module AccessLint
   class Audit
@@ -10,7 +10,10 @@ module AccessLint
     end
 
     def run
-      `phantomjs #{RUNNER_PATH} #{@target}`
+      result = `phantomjs #{RUNNER_PATH} #{@target}`
+      if !result.nil?
+        JSON.parse(result)
+      end
     end
   end
 end

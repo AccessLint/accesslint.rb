@@ -11,10 +11,9 @@ if (system.args.length !== 2) {
     if (status === 'success') {
       page.injectJs('../../google-chrome/accessibility-developer-tools/gen/axs_testing.js');
       var report = page.evaluate(function() {
-        var results = axs.Audit.run();
-        return axs.Audit.createReport(results);
+        return axs.Audit.run();
       });
-      console.log(report);
+      console.log(JSON.stringify(report));
       phantom.exit();
     } else {
       console.log('Failed to load the page at ' +
