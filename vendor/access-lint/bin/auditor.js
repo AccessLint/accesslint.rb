@@ -2,6 +2,14 @@ var page = require('webpage').create(),
     system = require('system'),
     url;
 
+page.settings.resourceTimeout = 10000;
+page.onResourceTimeout = function(e) {
+  console.log(e.errorCode);   // it'll probably be 408
+  console.log(e.errorString); // it'll probably be 'Network timeout on resource'
+  console.log(e.url);         // the url whose request timed out
+  phantom.exit(1);
+};
+
 if (system.args.length !== 2) {
   console.log('Usage: phantomjs auditor.js URL');
   phantom.exit();
