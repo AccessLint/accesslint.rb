@@ -17,11 +17,11 @@ And then execute:
 
 ## Usage
 
-    $ bundle exec access_lint <url-or-filename>
+    $ access_lint audit <url-or-filename>
 
 ### Example
 
-    $ bundle exec access_lint http://github.com
+    $ access_lint http://github.com
     > *** Begin accessibility audit results ***
     An accessibility audit found
     Warnings:
