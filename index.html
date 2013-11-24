@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>AccessLint by ckundo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>AccessLint</h1>
+        <p>Command line accessibility checker.</p>
+
+        <p class="view"><a href="https://github.com/ckundo/access_lint">View the Project on GitHub <small>ckundo/access_lint</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ckundo/access_lint/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ckundo/access_lint/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ckundo/access_lint">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="accesslint" class="anchor" href="#accesslint"><span class="octicon octicon-link"></span></a>AccessLint</h1>
+
+<p>Run accessibility audits on web pages from the command line.</p>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>AccessLint uses the <a href="https://github.com/GoogleChrome/accessibility-developer-tools">Accessibility Developer Tools</a> javascript library to make assertions on the DOM via PhantomJS.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>$ brew install phantomjs
+
+$ gem install access_lint
+
+$ access_lint audit &lt;url-or-filename&gt;
+</code></pre>
+
+<h2>
+<a name="command-line-usage" class="anchor" href="#command-line-usage"><span class="octicon octicon-link"></span></a>Command Line Usage</h2>
+
+<p>Running the <code>audit</code> command will return an array of stringified JSON objects to stdout:</p>
+
+<pre><code>$ access_lint audit TARGET  # TARGET can be a url or a path to a file
+</code></pre>
+
+<p>The JSON structure looks like:</p>
+
+<pre><code>[
+    { 
+    "element_names": ["&lt;p class=\"foo\"&gt;relevant element&lt;/p&gt;"], # array of string values for applicable DOM nodes
+    "elements": [DOM node],                                     # array of failing nodes as DOM objects.
+    "severity": "WARNING",                                      # string for the severity of the failure.
+    "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
+    "title": "Some description"                                 # string description of the failure.
+    }
+]
+</code></pre>
+
+<h3>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<pre><code>$ access_lint audit http://ckundo.com
+
+[{"element_names": ["&lt;span class=\"blogger-gear\"&gt;&lt;/span&gt;"], "elements": [DOM node], "severity"=&gt;"Warning", "status"=&gt;"FAIL", "title"=&gt;"Meaningful images should not be used in element backgrounds"}, ...]
+</code></pre>
+
+<h2>
+<a name="rules" class="anchor" href="#rules"><span class="octicon octicon-link"></span></a>Rules</h2>
+
+<ul>
+<li>Audio elements should have controls</li>
+<li>ARIA state and property values must be valid</li>
+<li>Elements with ARIA roles must use a valid, non-abstract ARIA role</li>
+<li>Controls and media elements should have labels</li>
+<li>These elements are focusable but either invisible or obscured by another element</li>
+<li>Images should have an alt attribute</li>
+<li>The purpose of each link should be clear from the link text</li>
+<li>Text elements should have a reasonable contrast ratio</li>
+<li>role=main should only appear on significant elements</li>
+<li>Meaningful images should not be used in element backgrounds</li>
+<li>aria-labelledby attributes should refer to an element which exists in the DOM</li>
+<li>The web page should have a title that describes topic or purpose</li>
+<li>Elements with ARIA roles must have all required attributes for that role</li>
+<li>Video elements should use  elements to provide captions</li>
+</ul><h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ckundo">ckundo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
