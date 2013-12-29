@@ -10,6 +10,10 @@ page.onResourceTimeout = function(e) {
   phantom.exit(1);
 };
 
+page.onError = function(message) {
+  // suppress errors
+};
+
 if (system.args.length !== 2) {
   console.log('Usage: phantomjs auditor.js URL');
   phantom.exit();
