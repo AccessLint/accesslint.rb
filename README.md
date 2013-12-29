@@ -40,6 +40,8 @@ The JSON structure looks like:
 
 ## Rules
 
+For full descriptions of the audit rules, visit the [Accessibility Developer Tools project wiki](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules)
+
 * Audio elements should have controls
 * ARIA state and property values must be valid
 * Elements with ARIA roles must use a valid, non-abstract ARIA role
