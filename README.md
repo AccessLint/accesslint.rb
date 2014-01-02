@@ -15,15 +15,28 @@ AccessLint uses the [Accessibility Developer Tools](https://github.com/GoogleChr
 
     $ gem install access_lint
 
-    $ access_lint audit <url-or-filename>
+    $ access_lint audit [url|filename]
 
-## Command Line Usage
+## Usage
 
-Running the `audit` command will return an array of stringified JSON objects to stdout:
+### Ruby
 
-    $ access_lint audit TARGET  # TARGET can be a url or a path to a file
+Run the audit from a Ruby application like so
+    
+    $ irb
+    > require 'access_lint'
+    => true
+    > Audit.new('http://twitter.com').run
+    => results ...
 
-The JSON structure looks like:
+### Command Line
+
+Running the `audit` command from the command line will print an array of stringified JSON objects:
+
+    $ access_lint audit http://twitter.com # url or a path to a file
+    # results ...
+
+### Results Object
 
     {
         "PASS": [                                                           # Status group
@@ -38,12 +51,6 @@ The JSON structure looks like:
         "NA": [ { ... } ],
         "FAIL": [ { ... }]
     ]
-
-### Example
-
-    $ access_lint audit http://ckundo.com
-    
-    [{"element_names": ["<span class=\"blogger-gear\"></span>"], "severity"=>"Warning", "status"=>"FAIL", "title"=>"Meaningful images should not be used in element backgrounds"}, ...]
 
 ## Rules
 
