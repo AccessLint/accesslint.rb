@@ -34,7 +34,7 @@ Run the audit from a Ruby application like so
     $ irb
     > require 'access_lint'
     => true
-    > Audit.new('http://twitter.com').run
+    > AccessLint::Audit.new('http://twitter.com').run
     => results ...
 
 ### Results Object
