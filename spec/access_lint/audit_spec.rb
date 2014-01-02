@@ -2,14 +2,16 @@ require 'spec_helper'
 
 module AccessLint
   describe Audit do
-    let(:target) { double(:target) }
 
     describe '#run' do
-      let(:audit) { Audit.new(target) }
+      it 'return a parsed set of results' do
+        target = double
+        output = JSON.generate([{status: 'passing', foo: 'bar'}])
 
-      it 'runs phantomjs' do
-        audit.should_receive(:`).with(/^phantomjs.*/)
-        audit.run
+        audit = Audit.new(target)
+        audit.stub(:runner) { double(:runner, output: output, run: double) }
+
+        expect(audit.run).to eq "passing"=>[{"status"=>"passing", "foo"=>"bar"}]
       end
     end
   end
