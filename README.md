@@ -1,10 +1,10 @@
 # AccessLint
 
-Run accessibility audits on web pages from the command line.
+Run web accessibility audits on urls or files, from the command line or within Ruby.
 
 ## About
 
-AccessLint uses the [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools) javascript library to make assertions on the DOM via PhantomJS.
+AccessLint uses the [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools) javascript library to make assertions on the DOM via PhantomJS. The rules that are applied are [listed below](#rules).
 
 ## Installation
 
@@ -22,13 +22,18 @@ Running the `audit` command will return an array of stringified JSON objects to 
 
 The JSON structure looks like:
 
-    [
-        { 
-        "element_names": ["<p class=\"foo\">relevant element</p>"], # array of string values for applicable DOM nodes
-        "severity": "WARNING",                                      # string for the severity of the failure.
-        "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
-        "title": "Some description"                                 # string description of the failure.
-        }
+    {
+        "PASS": [                                                           # Status group
+            { 
+                "element_names": ["<p class=\"foo\">relevant element</p>"], # applicable DOM elements
+                "severity": "WARNING",                                      # 'WARNING' or 'SEVERE'
+                "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
+                "title": "Some description"                                 # rule description
+            }, 
+            { ... }
+        ],
+        "NA": [ { ... } ],
+        "FAIL": [ { ... }]
     ]
 
 ### Example
