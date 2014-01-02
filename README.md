@@ -2,8 +2,7 @@
 
 Run web accessibility audits on urls or files, from the command line or within Ruby.
 
-
-
+Example usage at <http://accesslint.com>.
 
 ## About
 
