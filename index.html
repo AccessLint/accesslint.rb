@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="AccessLint : Check for accessibility errors via the command line." />
+    <meta name="description" content="access_lint : Check for web accessibility errors via the command line or Ruby." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>AccessLint</title>
+    <title>access_lint</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/ckundo/access_lint">View on GitHub</a>
 
-          <h1 id="project_title">AccessLint</h1>
-          <h2 id="project_tagline">Check for accessibility errors via the command line.</h2>
+          <h1 id="project_title">access_lint</h1>
+          <h2 id="project_tagline">Check for web accessibility errors via the command line or Ruby.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/ckundo/access_lint/zipball/master">Download this project as a .zip file</a>
@@ -31,52 +31,77 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h2>
-<a name="what-is-accesslint" class="anchor" href="#what-is-accesslint"><span class="octicon octicon-link"></span></a>What is AccessLint?</h2>
+        <h1>
+<a name="access_lint" class="anchor" href="#access_lint"><span class="octicon octicon-link"></span></a>access_lint</h1>
 
-<p>AccessLint visits a web page and outputs an accessibility audit result to the command line. It does this using PhantomJS and the <a href="https://github.com/GoogleChrome/accessibility-developer-tools">Accessibility Developer Tools</a> library.</p>
+<p><a href="https://travis-ci.org/ckundo/access_lint"><img src="https://travis-ci.org/ckundo/access_lint.png" alt="Build Status"></a> <a href="http://badge.fury.io/rb/access_lint"><img src="https://badge.fury.io/rb/access_lint.png" alt="Gem Version"></a> <a href="https://codeclimate.com/repos/52c4c7ca6956804bb2000905/feed"><img src="https://codeclimate.com/repos/52c4c7ca6956804bb2000905/badges/5a971515dcfd43cf57e1/gpa.png" alt="Code Climate"></a> <a href="https://coveralls.io/r/ckundo/access_lint?branch=master"><img src="https://coveralls.io/repos/ckundo/access_lint/badge.png?branch=master" alt="Coverage Status"></a></p>
 
-<p>Run AccessLint as part of your QA workflow, or include it in as part of your automated test suite to guard against accessibility errors.</p>
+<p>Run web accessibility audits on urls or files, from the command line or within Ruby.</p>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>AccessLint uses the <a href="https://github.com/GoogleChrome/accessibility-developer-tools">Accessibility Developer Tools</a> javascript library to make assertions on the DOM via PhantomJS. The rules that are applied are <a href="#rules">listed below</a>.</p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<pre><code>$ brew install phantomjs
+<p>First, install PhantomJS (<a href="http://phantomjs.org/">full guide</a>). On OS X:</p>
 
-$ gem install access_lint
+<pre><code>$ brew install phantomjs
+</code></pre>
+
+<p>Then install the rubygem:</p>
+
+<pre><code>$ gem install access_lint
 </code></pre>
 
 <h2>
-<a name="command-line-usage" class="anchor" href="#command-line-usage"><span class="octicon octicon-link"></span></a>Command Line Usage</h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Running the <code>audit</code> command will return an array of stringified JSON objects to stdout:</p>
+<h3>
+<a name="command-line" class="anchor" href="#command-line"><span class="octicon octicon-link"></span></a>Command Line</h3>
 
-<pre><code>$ access_lint audit TARGET  # TARGET can be a url or a path to a file
-</code></pre>
+<p>From the command line, specify a url or filename to be audited:</p>
 
-<p>The JSON structure looks like:</p>
-
-<pre><code>[
-    { 
-    "element_names": ["&lt;p class=\"foo\"&gt;relevant element&lt;/p&gt;"], # array of string values for applicable DOM nodes
-    "elements": [DOM node],                                     # array of failing nodes as DOM objects.
-    "severity": "WARNING",                                      # string for the severity of the failure.
-    "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
-    "title": "Some description"                                 # string description of the failure.
-    }
-]
+<pre><code>$ access_lint audit http://twitter.com # url or a path to a file
+# results ...
 </code></pre>
 
 <h3>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h3>
+<a name="ruby" class="anchor" href="#ruby"><span class="octicon octicon-link"></span></a>Ruby</h3>
 
-<pre><code>$ access_lint audit http://ckundo.com
+<p>Run the audit from a Ruby application like so</p>
 
-[{"element_names": ["&lt;span class=\"blogger-gear\"&gt;&lt;/span&gt;"], "elements": [DOM node], "severity"=&gt;"Warning", "status"=&gt;"FAIL", "title"=&gt;"Meaningful images should not be used in element backgrounds"}, ...]
+<pre><code>$ irb
+&gt; require 'access_lint'
+=&gt; true
+&gt; Audit.new('http://twitter.com').run
+=&gt; results ...
+</code></pre>
+
+<h3>
+<a name="results-object" class="anchor" href="#results-object"><span class="octicon octicon-link"></span></a>Results Object</h3>
+
+<pre><code>{
+    "PASS": [                                                           # Status group
+        { 
+            "element_names": ["&lt;p class=\"foo\"&gt;relevant element&lt;/p&gt;"], # applicable DOM elements
+            "severity": "WARNING",                                      # 'WARNING' or 'SEVERE'
+            "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
+            "title": "Some description"                                 # rule description
+        }, 
+        { ... }
+    ],
+    "NA": [ { ... } ],
+    "FAIL": [ { ... }]
+]
 </code></pre>
 
 <h2>
-<a name="audit-rules" class="anchor" href="#audit-rules"><span class="octicon octicon-link"></span></a>Audit rules</h2>
+<a name="rules" class="anchor" href="#rules"><span class="octicon octicon-link"></span></a>Rules</h2>
+
+<p>For full descriptions of the audit rules, visit the <a href="https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules">Accessibility Developer Tools project wiki</a></p>
 
 <ul>
 <li>Audio elements should have controls</li>
@@ -93,14 +118,23 @@ $ gem install access_lint
 <li>The web page should have a title that describes topic or purpose</li>
 <li>Elements with ARIA roles must have all required attributes for that role</li>
 <li>Video elements should use  elements to provide captions</li>
-</ul>
+</ul><h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">AccessLint maintained by <a href="https://github.com/ckundo">ckundo</a></p>
+        <p class="copyright">access_lint maintained by <a href="https://github.com/ckundo">ckundo</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
