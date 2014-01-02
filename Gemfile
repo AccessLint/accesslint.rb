@@ -10,3 +10,5 @@ group :development do
   gem "pry-stack_explorer"
   gem "thor"
 end
+
+gem 'coveralls', require: false
