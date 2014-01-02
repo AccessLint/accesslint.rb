@@ -1,4 +1,4 @@
-# AccessLint [![Build Status](https://travis-ci.org/ckundo/access_lint.png)](https://travis-ci.org/ckundo/access_lint)
+# AccessLint [![Build Status](https://travis-ci.org/ckundo/access_lint.png)](https://travis-ci.org/ckundo/access_lint) [![Code Climate](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/badges/5a971515dcfd43cf57e1/gpa.png)](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/feed)
 
 Run web accessibility audits on urls or files, from the command line or within Ruby.
 
