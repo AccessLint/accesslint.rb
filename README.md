@@ -11,13 +11,22 @@ AccessLint uses the [Accessibility Developer Tools](https://github.com/GoogleChr
 
 ## Installation
 
+First, install PhantomJS ([full guide](http://phantomjs.org/)). On OS X:
+    
     $ brew install phantomjs
+
+Then install the rubygem:
 
     $ gem install access_lint
 
-    $ access_lint audit [url|filename]
-
 ## Usage
+
+### Command Line
+
+From the command line, specify a url or filename to be audited:
+
+    $ access_lint audit http://twitter.com # url or a path to a file
+    # results ...
 
 ### Ruby
 
@@ -28,13 +37,6 @@ Run the audit from a Ruby application like so
     => true
     > Audit.new('http://twitter.com').run
     => results ...
-
-### Command Line
-
-Running the `audit` command from the command line will print an array of stringified JSON objects:
-
-    $ access_lint audit http://twitter.com # url or a path to a file
-    # results ...
 
 ### Results Object
 
