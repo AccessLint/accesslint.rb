@@ -25,7 +25,6 @@ The JSON structure looks like:
     [
         { 
         "element_names": ["<p class=\"foo\">relevant element</p>"], # array of string values for applicable DOM nodes
-        "elements": [DOM node],                                     # array of failing nodes as DOM objects.
         "severity": "WARNING",                                      # string for the severity of the failure.
         "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
         "title": "Some description"                                 # string description of the failure.
@@ -36,7 +35,7 @@ The JSON structure looks like:
 
     $ access_lint audit http://ckundo.com
     
-    [{"element_names": ["<span class=\"blogger-gear\"></span>"], "elements": [DOM node], "severity"=>"Warning", "status"=>"FAIL", "title"=>"Meaningful images should not be used in element backgrounds"}, ...]
+    [{"element_names": ["<span class=\"blogger-gear\"></span>"], "severity"=>"Warning", "status"=>"FAIL", "title"=>"Meaningful images should not be used in element backgrounds"}, ...]
 
 ## Rules
 
