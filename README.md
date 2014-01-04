@@ -2,8 +2,6 @@
 
 Run web accessibility audits on urls or files, from the command line or within Ruby.
 
-Example usage at <http://accesslint.com>.
-
 ## About
 
 AccessLint uses the [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools) javascript library to make assertions on the DOM via PhantomJS. The rules that are applied are [listed below](#rules).
@@ -71,6 +69,10 @@ For full descriptions of the audit rules, visit the [Accessibility Developer Too
 * The web page should have a title that describes topic or purpose
 * Elements with ARIA roles must have all required attributes for that role
 * Video elements should use <track> elements to provide captions
+
+## Roadmap
+
+Visit the project backlog: <https://www.pivotaltracker.com/s/projects/985186>.
 
 ## Contributing
 
