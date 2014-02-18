@@ -18,6 +18,13 @@ Then install the rubygem:
 
 ## Usage
 
+### Command Line
+
+From the command line, specify a url or filename to be audited:
+
+    $ access_lint audit http://twitter.com # url or a path to a file
+    # results ...
+
 ### Ruby
 
 Run the audit from a Ruby application like so
