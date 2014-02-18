@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.executables   = ['access_lint']
 
   spec.add_dependency "thor"
+  spec.add_dependency "awesome_print"
+  spec.add_dependency "command_line_reporter"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
