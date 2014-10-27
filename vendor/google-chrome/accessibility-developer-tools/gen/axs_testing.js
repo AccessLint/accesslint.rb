@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Generated from http://github.com/GoogleChrome/accessibility-developer-tools/tree/33515adf3dcd6e17d48f8a9dde27c60865545b70
+ * Generated from http://github.com/GoogleChrome/accessibility-developer-tools/tree/80f7c9ac87569c23429a7b07de1af980679c9a34
  *
  * See project README for build steps.
  */
- 
+
 // AUTO-GENERATED CONTENT BELOW: DO NOT EDIT! See above for details.
 
 var COMPILED = !0, goog = goog || {};
@@ -414,20 +414,20 @@ axs.browserUtils.matchSelector = function(a, b) {
   return a.webkitMatchesSelector ? a.webkitMatchesSelector(b) : a.mozMatchesSelector ? a.mozMatchesSelector(b) : !1
 };
 axs.constants = {};
-axs.constants.ARIA_ROLES = {alert:{namefrom:["author"], parent:["region"]}, alertdialog:{namefrom:["author"], namerequired:!0, parent:["alert", "dialog"]}, application:{namefrom:["author"], namerequired:!0, parent:["landmark"]}, article:{namefrom:["author"], parent:["document", "region"]}, banner:{namefrom:["author"], parent:["landmark"]}, button:{childpresentational:!0, namefrom:["contents", "author"], namerequired:!0, parent:["command"], properties:["aria-expanded", "aria-pressed"]}, checkbox:{namefrom:["contents", 
-"author"], namerequired:!0, parent:["input"], requiredProperties:["aria-checked"], properties:["aria-checked"]}, columnheader:{namefrom:["contents", "author"], namerequired:!0, parent:["gridcell", "sectionhead", "widget"], properties:["aria-sort"]}, combobox:{mustcontain:["listbox", "textbox"], namefrom:["author"], namerequired:!0, parent:["select"], requiredProperties:["aria-expanded"], properties:["aria-expanded", "aria-autocomplete", "aria-required"]}, command:{"abstract":!0, namefrom:["author"], 
-parent:["widget"]}, complementary:{namefrom:["author"], parent:["landmark"]}, composite:{"abstract":!0, childpresentational:!1, namefrom:["author"], parent:["widget"], properties:["aria-activedescendant"]}, contentinfo:{namefrom:["author"], parent:["landmark"]}, definition:{namefrom:["author"], parent:["section"]}, dialog:{namefrom:["author"], namerequired:!0, parent:["window"]}, directory:{namefrom:["contents", "author"], parent:["list"]}, document:{namefrom:[" author"], namerequired:!0, parent:["structure"], 
-properties:["aria-expanded"]}, form:{namefrom:["author"], parent:["landmark"]}, grid:{mustcontain:["row", "rowgroup"], namefrom:["author"], namerequired:!0, parent:["composite", "region"], properties:["aria-level", "aria-multiselectable", "aria-readonly"]}, gridcell:{namefrom:["contents", "author"], namerequired:!0, parent:["section", "widget"], properties:["aria-readonly", "aria-required", "aria-selected"]}, group:{namefrom:[" author"], parent:["section"], properties:["aria-activedescendant"]}, 
-heading:{namerequired:!0, parent:["sectionhead"], properties:["aria-level"]}, img:{childpresentational:!0, namefrom:["author"], namerequired:!0, parent:["section"]}, input:{"abstract":!0, namefrom:["author"], parent:["widget"]}, landmark:{"abstract":!0, namefrom:["contents", "author"], namerequired:!1, parent:["region"]}, link:{namefrom:["contents", "author"], namerequired:!0, parent:["command"], properties:["aria-expanded"]}, list:{mustcontain:["group", "listitem"], namefrom:["author"], parent:["region"]}, 
-listbox:{mustcontain:["option"], namefrom:["author"], namerequired:!0, parent:["list", "select"], properties:["aria-multiselectable", "aria-required"]}, listitem:{namefrom:["contents", "author"], namerequired:!0, parent:["section"], properties:["aria-level", "aria-posinset", "aria-setsize"]}, log:{namefrom:[" author"], namerequired:!0, parent:["region"]}, main:{namefrom:["author"], parent:["landmark"]}, marquee:{namerequired:!0, parent:["section"]}, math:{childpresentational:!0, namefrom:["author"], 
-parent:["section"]}, menu:{mustcontain:["group", "menuitemradio", "menuitem", "menuitemcheckbox"], namefrom:["author"], namerequired:!0, parent:["list", "select"]}, menubar:{namefrom:["author"], parent:["menu"]}, menuitem:{namefrom:["contents", "author"], namerequired:!0, parent:["command"]}, menuitemcheckbox:{namefrom:["contents", "author"], namerequired:!0, parent:["checkbox", "menuitem"]}, menuitemradio:{namefrom:["contents", "author"], namerequired:!0, parent:["menuitemcheckbox", "radio"]}, navigation:{namefrom:["author"], 
-parent:["landmark"]}, note:{namefrom:["author"], parent:["section"]}, option:{namefrom:["contents", "author"], namerequired:!0, parent:["input"], properties:["aria-checked", "aria-posinset", "aria-selected", "aria-setsize"]}, presentation:{parent:["structure"]}, progressbar:{childpresentational:!0, namefrom:["author"], namerequired:!0, parent:["range"]}, radio:{namefrom:["contents", "author"], namerequired:!0, parent:["checkbox", "option"]}, radiogroup:{mustcontain:["radio"], namefrom:["author"], 
-namerequired:!0, parent:["select"], properties:["aria-required"]}, range:{"abstract":!0, namefrom:["author"], parent:["widget"], properties:["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext"]}, region:{namefrom:[" author"], parent:["section"]}, roletype:{"abstract":!0, properties:"aria-atomic aria-busy aria-controls aria-describedby aria-disabled aria-dropeffect aria-flowto aria-grabbed aria-haspopup aria-hidden aria-invalid aria-label aria-labelledby aria-live aria-owns aria-relevant".split(" ")}, 
-row:{mustcontain:["columnheader", "gridcell", "rowheader"], namefrom:["contents", "author"], parent:["group", "widget"], properties:["aria-level", "aria-selected"]}, rowgroup:{mustcontain:["row"], namefrom:["contents", "author"], parent:["group"]}, rowheader:{namefrom:["contents", "author"], namerequired:!0, parent:["gridcell", "sectionhead", "widget"], properties:["aria-sort"]}, search:{namefrom:["author"], parent:["landmark"]}, section:{"abstract":!0, namefrom:["contents", "author"], parent:["structure"], 
-properties:["aria-expanded"]}, sectionhead:{"abstract":!0, namefrom:["contents", "author"], parent:["structure"], properties:["aria-expanded"]}, select:{"abstract":!0, namefrom:["author"], parent:["composite", "group", "input"]}, separator:{childpresentational:!0, namefrom:["author"], parent:["structure"], properties:["aria-expanded", "aria-orientation"]}, scrollbar:{childpresentational:!0, namefrom:["author"], namerequired:!1, parent:["input", "range"], requiredProperties:["aria-controls", "aria-orientation", 
-"aria-valuemax", "aria-valuemin", "aria-valuenow"], properties:["aria-controls", "aria-orientation", "aria-valuemax", "aria-valuemin", "aria-valuenow"]}, slider:{childpresentational:!0, namefrom:["author"], namerequired:!0, parent:["input", "range"], requiredProperties:["aria-valuemax", "aria-valuemin", "aria-valuenow"], properties:["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-orientation"]}, spinbutton:{namefrom:["author"], namerequired:!0, parent:["input", "range"], requiredProperties:["aria-valuemax", 
-"aria-valuemin", "aria-valuenow"], properties:["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-required"]}, status:{parent:["region"]}, structure:{"abstract":!0, parent:["roletype"]}, tab:{namefrom:["contents", "author"], parent:["sectionhead", "widget"], properties:["aria-selected"]}, tablist:{mustcontain:["tab"], namefrom:["author"], parent:["composite", "directory"], properties:["aria-level"]}, tabpanel:{namefrom:["author"], namerequired:!0, parent:["region"]}, textbox:{namefrom:["author"], 
-namerequired:!0, parent:["input"], properties:["aria-activedescendant", "aria-autocomplete", "aria-multiline", "aria-readonly", "aria-required"]}, timer:{namefrom:["author"], namerequired:!0, parent:["status"]}, toolbar:{namefrom:["author"], parent:["group"]}, tooltip:{namerequired:!0, parent:["section"]}, tree:{mustcontain:["group", "treeitem"], namefrom:["author"], namerequired:!0, parent:["select"], properties:["aria-multiselectable", "aria-required"]}, treegrid:{mustcontain:["row"], namefrom:["author"], 
+axs.constants.ARIA_ROLES = {alert:{namefrom:["author"], parent:["region"]}, alertdialog:{namefrom:["author"], namerequired:!0, parent:["alert", "dialog"]}, application:{namefrom:["author"], namerequired:!0, parent:["landmark"]}, article:{namefrom:["author"], parent:["document", "region"]}, banner:{namefrom:["author"], parent:["landmark"]}, button:{childpresentational:!0, namefrom:["contents", "author"], namerequired:!0, parent:["command"], properties:["aria-expanded", "aria-pressed"]}, checkbox:{namefrom:["contents",
+"author"], namerequired:!0, parent:["input"], requiredProperties:["aria-checked"], properties:["aria-checked"]}, columnheader:{namefrom:["contents", "author"], namerequired:!0, parent:["gridcell", "sectionhead", "widget"], properties:["aria-sort"]}, combobox:{mustcontain:["listbox", "textbox"], namefrom:["author"], namerequired:!0, parent:["select"], requiredProperties:["aria-expanded"], properties:["aria-expanded", "aria-autocomplete", "aria-required"]}, command:{"abstract":!0, namefrom:["author"],
+parent:["widget"]}, complementary:{namefrom:["author"], parent:["landmark"]}, composite:{"abstract":!0, childpresentational:!1, namefrom:["author"], parent:["widget"], properties:["aria-activedescendant"]}, contentinfo:{namefrom:["author"], parent:["landmark"]}, definition:{namefrom:["author"], parent:["section"]}, dialog:{namefrom:["author"], namerequired:!0, parent:["window"]}, directory:{namefrom:["contents", "author"], parent:["list"]}, document:{namefrom:[" author"], namerequired:!0, parent:["structure"],
+properties:["aria-expanded"]}, form:{namefrom:["author"], parent:["landmark"]}, grid:{mustcontain:["row", "rowgroup"], namefrom:["author"], namerequired:!0, parent:["composite", "region"], properties:["aria-level", "aria-multiselectable", "aria-readonly"]}, gridcell:{namefrom:["contents", "author"], namerequired:!0, parent:["section", "widget"], properties:["aria-readonly", "aria-required", "aria-selected"]}, group:{namefrom:[" author"], parent:["section"], properties:["aria-activedescendant"]},
+heading:{namerequired:!0, parent:["sectionhead"], properties:["aria-level"]}, img:{childpresentational:!0, namefrom:["author"], namerequired:!0, parent:["section"]}, input:{"abstract":!0, namefrom:["author"], parent:["widget"]}, landmark:{"abstract":!0, namefrom:["contents", "author"], namerequired:!1, parent:["region"]}, link:{namefrom:["contents", "author"], namerequired:!0, parent:["command"], properties:["aria-expanded"]}, list:{mustcontain:["group", "listitem"], namefrom:["author"], parent:["region"]},
+listbox:{mustcontain:["option"], namefrom:["author"], namerequired:!0, parent:["list", "select"], properties:["aria-multiselectable", "aria-required"]}, listitem:{namefrom:["contents", "author"], namerequired:!0, parent:["section"], properties:["aria-level", "aria-posinset", "aria-setsize"]}, log:{namefrom:[" author"], namerequired:!0, parent:["region"]}, main:{namefrom:["author"], parent:["landmark"]}, marquee:{namerequired:!0, parent:["section"]}, math:{childpresentational:!0, namefrom:["author"],
+parent:["section"]}, menu:{mustcontain:["group", "menuitemradio", "menuitem", "menuitemcheckbox"], namefrom:["author"], namerequired:!0, parent:["list", "select"]}, menubar:{namefrom:["author"], parent:["menu"]}, menuitem:{namefrom:["contents", "author"], namerequired:!0, parent:["command"]}, menuitemcheckbox:{namefrom:["contents", "author"], namerequired:!0, parent:["checkbox", "menuitem"]}, menuitemradio:{namefrom:["contents", "author"], namerequired:!0, parent:["menuitemcheckbox", "radio"]}, navigation:{namefrom:["author"],
+parent:["landmark"]}, note:{namefrom:["author"], parent:["section"]}, option:{namefrom:["contents", "author"], namerequired:!0, parent:["input"], properties:["aria-checked", "aria-posinset", "aria-selected", "aria-setsize"]}, presentation:{parent:["structure"]}, progressbar:{childpresentational:!0, namefrom:["author"], namerequired:!0, parent:["range"]}, radio:{namefrom:["contents", "author"], namerequired:!0, parent:["checkbox", "option"]}, radiogroup:{mustcontain:["radio"], namefrom:["author"],
+namerequired:!0, parent:["select"], properties:["aria-required"]}, range:{"abstract":!0, namefrom:["author"], parent:["widget"], properties:["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext"]}, region:{namefrom:[" author"], parent:["section"]}, roletype:{"abstract":!0, properties:"aria-atomic aria-busy aria-controls aria-describedby aria-disabled aria-dropeffect aria-flowto aria-grabbed aria-haspopup aria-hidden aria-invalid aria-label aria-labelledby aria-live aria-owns aria-relevant".split(" ")},
+row:{mustcontain:["columnheader", "gridcell", "rowheader"], namefrom:["contents", "author"], parent:["group", "widget"], properties:["aria-level", "aria-selected"]}, rowgroup:{mustcontain:["row"], namefrom:["contents", "author"], parent:["group"]}, rowheader:{namefrom:["contents", "author"], namerequired:!0, parent:["gridcell", "sectionhead", "widget"], properties:["aria-sort"]}, search:{namefrom:["author"], parent:["landmark"]}, section:{"abstract":!0, namefrom:["contents", "author"], parent:["structure"],
+properties:["aria-expanded"]}, sectionhead:{"abstract":!0, namefrom:["contents", "author"], parent:["structure"], properties:["aria-expanded"]}, select:{"abstract":!0, namefrom:["author"], parent:["composite", "group", "input"]}, separator:{childpresentational:!0, namefrom:["author"], parent:["structure"], properties:["aria-expanded", "aria-orientation"]}, scrollbar:{childpresentational:!0, namefrom:["author"], namerequired:!1, parent:["input", "range"], requiredProperties:["aria-controls", "aria-orientation",
+"aria-valuemax", "aria-valuemin", "aria-valuenow"], properties:["aria-controls", "aria-orientation", "aria-valuemax", "aria-valuemin", "aria-valuenow"]}, slider:{childpresentational:!0, namefrom:["author"], namerequired:!0, parent:["input", "range"], requiredProperties:["aria-valuemax", "aria-valuemin", "aria-valuenow"], properties:["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-orientation"]}, spinbutton:{namefrom:["author"], namerequired:!0, parent:["input", "range"], requiredProperties:["aria-valuemax",
+"aria-valuemin", "aria-valuenow"], properties:["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-required"]}, status:{parent:["region"]}, structure:{"abstract":!0, parent:["roletype"]}, tab:{namefrom:["contents", "author"], parent:["sectionhead", "widget"], properties:["aria-selected"]}, tablist:{mustcontain:["tab"], namefrom:["author"], parent:["composite", "directory"], properties:["aria-level"]}, tabpanel:{namefrom:["author"], namerequired:!0, parent:["region"]}, textbox:{namefrom:["author"],
+namerequired:!0, parent:["input"], properties:["aria-activedescendant", "aria-autocomplete", "aria-multiline", "aria-readonly", "aria-required"]}, timer:{namefrom:["author"], namerequired:!0, parent:["status"]}, toolbar:{namefrom:["author"], parent:["group"]}, tooltip:{namerequired:!0, parent:["section"]}, tree:{mustcontain:["group", "treeitem"], namefrom:["author"], namerequired:!0, parent:["select"], properties:["aria-multiselectable", "aria-required"]}, treegrid:{mustcontain:["row"], namefrom:["author"],
 namerequired:!0, parent:["grid", "tree"]}, treeitem:{namefrom:["contents", "author"], namerequired:!0, parent:["listitem", "option"]}, widget:{"abstract":!0, parent:["roletype"]}, window:{"abstract":!0, namefrom:[" author"], parent:["roletype"], properties:["aria-expanded"]}};
 axs.constants.WIDGET_ROLES = {};
 axs.constants.addAllParentRolesToSet_ = function(a, b) {
@@ -464,22 +464,22 @@ for(var roleName in axs.constants.ARIA_ROLES) {
   role.allParentRolesSet = parentRolesSet;
   "widget" in parentRolesSet && (axs.constants.WIDGET_ROLES[roleName] = role)
 }
-axs.constants.ARIA_PROPERTIES = {activedescendant:{type:"property", valueType:"idref"}, atomic:{defaultValue:"false", type:"property", valueType:"boolean"}, autocomplete:{defaultValue:"none", type:"property", valueType:"token", values:["inline", "list", "both", "none"]}, busy:{defaultValue:"false", type:"state", valueType:"boolean"}, checked:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "mixed", "undefined"]}, controls:{type:"property", valueType:"idref_list"}, 
-describedby:{type:"property", valueType:"idref_list"}, disabled:{defaultValue:"false", type:"state", valueType:"boolean"}, dropeffect:{defaultValue:"none", type:"property", valueType:"token_list", values:"copy move link execute popup none".split(" ")}, expanded:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "undefined"]}, flowto:{type:"property", valueType:"idref_list"}, grabbed:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", 
-"undefined"]}, haspopup:{defaultValue:"false", type:"property", valueType:"boolean"}, hidden:{defaultValue:"false", type:"state", valueType:"boolean"}, invalid:{defaultValue:"false", type:"state", valueType:"token", values:["grammar", "false", "spelling", "true"]}, label:{type:"property", valueType:"string"}, labelledby:{type:"property", valueType:"idref_list"}, level:{type:"property", valueType:"integer"}, live:{defaultValue:"off", type:"property", valueType:"token", values:["off", "polite", "assertive"]}, 
-multiline:{defaultValue:"false", type:"property", valueType:"boolean"}, multiselectable:{defaultValue:"false", type:"property", valueType:"boolean"}, orientation:{defaultValue:"vertical", type:"property", valueType:"token", values:["horizontal", "vertical"]}, owns:{type:"property", valueType:"idref_list"}, posinset:{type:"property", valueType:"integer"}, pressed:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "mixed", "undefined"]}, readonly:{defaultValue:"false", 
-type:"property", valueType:"boolean"}, relevant:{defaultValue:"additions text", type:"property", valueType:"token_list", values:["additions", "removals", "text", "all"]}, required:{defaultValue:"false", type:"property", valueType:"boolean"}, selected:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "undefined"]}, setsize:{type:"property", valueType:"integer"}, sort:{defaultValue:"none", type:"property", valueType:"token", values:["ascending", "descending", "none", 
+axs.constants.ARIA_PROPERTIES = {activedescendant:{type:"property", valueType:"idref"}, atomic:{defaultValue:"false", type:"property", valueType:"boolean"}, autocomplete:{defaultValue:"none", type:"property", valueType:"token", values:["inline", "list", "both", "none"]}, busy:{defaultValue:"false", type:"state", valueType:"boolean"}, checked:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "mixed", "undefined"]}, controls:{type:"property", valueType:"idref_list"},
+describedby:{type:"property", valueType:"idref_list"}, disabled:{defaultValue:"false", type:"state", valueType:"boolean"}, dropeffect:{defaultValue:"none", type:"property", valueType:"token_list", values:"copy move link execute popup none".split(" ")}, expanded:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "undefined"]}, flowto:{type:"property", valueType:"idref_list"}, grabbed:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false",
+"undefined"]}, haspopup:{defaultValue:"false", type:"property", valueType:"boolean"}, hidden:{defaultValue:"false", type:"state", valueType:"boolean"}, invalid:{defaultValue:"false", type:"state", valueType:"token", values:["grammar", "false", "spelling", "true"]}, label:{type:"property", valueType:"string"}, labelledby:{type:"property", valueType:"idref_list"}, level:{type:"property", valueType:"integer"}, live:{defaultValue:"off", type:"property", valueType:"token", values:["off", "polite", "assertive"]},
+multiline:{defaultValue:"false", type:"property", valueType:"boolean"}, multiselectable:{defaultValue:"false", type:"property", valueType:"boolean"}, orientation:{defaultValue:"vertical", type:"property", valueType:"token", values:["horizontal", "vertical"]}, owns:{type:"property", valueType:"idref_list"}, posinset:{type:"property", valueType:"integer"}, pressed:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "mixed", "undefined"]}, readonly:{defaultValue:"false",
+type:"property", valueType:"boolean"}, relevant:{defaultValue:"additions text", type:"property", valueType:"token_list", values:["additions", "removals", "text", "all"]}, required:{defaultValue:"false", type:"property", valueType:"boolean"}, selected:{defaultValue:"undefined", type:"state", valueType:"token", values:["true", "false", "undefined"]}, setsize:{type:"property", valueType:"integer"}, sort:{defaultValue:"none", type:"property", valueType:"token", values:["ascending", "descending", "none",
 "other"]}, valuemax:{type:"property", valueType:"decimal"}, valuemin:{type:"property", valueType:"decimal"}, valuenow:{type:"property", valueType:"decimal"}, valuetext:{type:"property", valueType:"string"}};
 axs.constants.GLOBAL_PROPERTIES = "aria-atomic aria-busy aria-controls aria-describedby aria-disabled aria-dropeffect aria-flowto aria-grabbed aria-haspopup aria-hidden aria-invalid aria-label aria-labelledby aria-live aria-owns aria-relevant".split(" ");
 axs.constants.NO_ROLE_NAME = " ";
-axs.constants.WIDGET_ROLE_TO_NAME = {alert:"aria_role_alert", alertdialog:"aria_role_alertdialog", button:"aria_role_button", checkbox:"aria_role_checkbox", columnheader:"aria_role_columnheader", combobox:"aria_role_combobox", dialog:"aria_role_dialog", grid:"aria_role_grid", gridcell:"aria_role_gridcell", link:"aria_role_link", listbox:"aria_role_listbox", log:"aria_role_log", marquee:"aria_role_marquee", menu:"aria_role_menu", menubar:"aria_role_menubar", menuitem:"aria_role_menuitem", menuitemcheckbox:"aria_role_menuitemcheckbox", 
+axs.constants.WIDGET_ROLE_TO_NAME = {alert:"aria_role_alert", alertdialog:"aria_role_alertdialog", button:"aria_role_button", checkbox:"aria_role_checkbox", columnheader:"aria_role_columnheader", combobox:"aria_role_combobox", dialog:"aria_role_dialog", grid:"aria_role_grid", gridcell:"aria_role_gridcell", link:"aria_role_link", listbox:"aria_role_listbox", log:"aria_role_log", marquee:"aria_role_marquee", menu:"aria_role_menu", menubar:"aria_role_menubar", menuitem:"aria_role_menuitem", menuitemcheckbox:"aria_role_menuitemcheckbox",
 menuitemradio:"aria_role_menuitemradio", option:axs.constants.NO_ROLE_NAME, progressbar:"aria_role_progressbar", radio:"aria_role_radio", radiogroup:"aria_role_radiogroup", rowheader:"aria_role_rowheader", scrollbar:"aria_role_scrollbar", slider:"aria_role_slider", spinbutton:"aria_role_spinbutton", status:"aria_role_status", tab:"aria_role_tab", tabpanel:"aria_role_tabpanel", textbox:"aria_role_textbox", timer:"aria_role_timer", toolbar:"aria_role_toolbar", tooltip:"aria_role_tooltip", treeitem:"aria_role_treeitem"};
-axs.constants.STRUCTURE_ROLE_TO_NAME = {article:"aria_role_article", application:"aria_role_application", banner:"aria_role_banner", columnheader:"aria_role_columnheader", complementary:"aria_role_complementary", contentinfo:"aria_role_contentinfo", definition:"aria_role_definition", directory:"aria_role_directory", document:"aria_role_document", form:"aria_role_form", group:"aria_role_group", heading:"aria_role_heading", img:"aria_role_img", list:"aria_role_list", listitem:"aria_role_listitem", 
+axs.constants.STRUCTURE_ROLE_TO_NAME = {article:"aria_role_article", application:"aria_role_application", banner:"aria_role_banner", columnheader:"aria_role_columnheader", complementary:"aria_role_complementary", contentinfo:"aria_role_contentinfo", definition:"aria_role_definition", directory:"aria_role_directory", document:"aria_role_document", form:"aria_role_form", group:"aria_role_group", heading:"aria_role_heading", img:"aria_role_img", list:"aria_role_list", listitem:"aria_role_listitem",
 main:"aria_role_main", math:"aria_role_math", navigation:"aria_role_navigation", note:"aria_role_note", region:"aria_role_region", rowheader:"aria_role_rowheader", search:"aria_role_search", separator:"aria_role_separator"};
-axs.constants.ATTRIBUTE_VALUE_TO_STATUS = [{name:"aria-autocomplete", values:{inline:"aria_autocomplete_inline", list:"aria_autocomplete_list", both:"aria_autocomplete_both"}}, {name:"aria-checked", values:{"true":"aria_checked_true", "false":"aria_checked_false", mixed:"aria_checked_mixed"}}, {name:"aria-disabled", values:{"true":"aria_disabled_true"}}, {name:"aria-expanded", values:{"true":"aria_expanded_true", "false":"aria_expanded_false"}}, {name:"aria-invalid", values:{"true":"aria_invalid_true", 
-grammar:"aria_invalid_grammar", spelling:"aria_invalid_spelling"}}, {name:"aria-multiline", values:{"true":"aria_multiline_true"}}, {name:"aria-multiselectable", values:{"true":"aria_multiselectable_true"}}, {name:"aria-pressed", values:{"true":"aria_pressed_true", "false":"aria_pressed_false", mixed:"aria_pressed_mixed"}}, {name:"aria-readonly", values:{"true":"aria_readonly_true"}}, {name:"aria-required", values:{"true":"aria_required_true"}}, {name:"aria-selected", values:{"true":"aria_selected_true", 
+axs.constants.ATTRIBUTE_VALUE_TO_STATUS = [{name:"aria-autocomplete", values:{inline:"aria_autocomplete_inline", list:"aria_autocomplete_list", both:"aria_autocomplete_both"}}, {name:"aria-checked", values:{"true":"aria_checked_true", "false":"aria_checked_false", mixed:"aria_checked_mixed"}}, {name:"aria-disabled", values:{"true":"aria_disabled_true"}}, {name:"aria-expanded", values:{"true":"aria_expanded_true", "false":"aria_expanded_false"}}, {name:"aria-invalid", values:{"true":"aria_invalid_true",
+grammar:"aria_invalid_grammar", spelling:"aria_invalid_spelling"}}, {name:"aria-multiline", values:{"true":"aria_multiline_true"}}, {name:"aria-multiselectable", values:{"true":"aria_multiselectable_true"}}, {name:"aria-pressed", values:{"true":"aria_pressed_true", "false":"aria_pressed_false", mixed:"aria_pressed_mixed"}}, {name:"aria-readonly", values:{"true":"aria_readonly_true"}}, {name:"aria-required", values:{"true":"aria_required_true"}}, {name:"aria-selected", values:{"true":"aria_selected_true",
 "false":"aria_selected_false"}}];
-axs.constants.INPUT_TYPE_TO_INFORMATION_TABLE_MSG = {button:"input_type_button", checkbox:"input_type_checkbox", color:"input_type_color", datetime:"input_type_datetime", "datetime-local":"input_type_datetime_local", date:"input_type_date", email:"input_type_email", file:"input_type_file", image:"input_type_image", month:"input_type_month", number:"input_type_number", password:"input_type_password", radio:"input_type_radio", range:"input_type_range", reset:"input_type_reset", search:"input_type_search", 
+axs.constants.INPUT_TYPE_TO_INFORMATION_TABLE_MSG = {button:"input_type_button", checkbox:"input_type_checkbox", color:"input_type_color", datetime:"input_type_datetime", "datetime-local":"input_type_datetime_local", date:"input_type_date", email:"input_type_email", file:"input_type_file", image:"input_type_image", month:"input_type_month", number:"input_type_number", password:"input_type_password", radio:"input_type_radio", range:"input_type_range", reset:"input_type_reset", search:"input_type_search",
 submit:"input_type_submit", tel:"input_type_tel", text:"input_type_text", url:"input_type_url", week:"input_type_week"};
 axs.constants.TAG_TO_INFORMATION_TABLE_VERBOSE_MSG = {A:"tag_link", BUTTON:"tag_button", H1:"tag_h1", H2:"tag_h2", H3:"tag_h3", H4:"tag_h4", H5:"tag_h5", H6:"tag_h6", LI:"tag_li", OL:"tag_ol", SELECT:"tag_select", TEXTAREA:"tag_textarea", UL:"tag_ul", SECTION:"tag_section", NAV:"tag_nav", ARTICLE:"tag_article", ASIDE:"tag_aside", HGROUP:"tag_hgroup", HEADER:"tag_header", FOOTER:"tag_footer", TIME:"tag_time", MARK:"tag_mark"};
 axs.constants.TAG_TO_INFORMATION_TABLE_BRIEF_MSG = {BUTTON:"tag_button", SELECT:"tag_select", TEXTAREA:"tag_textarea"};
@@ -543,19 +543,45 @@ axs.utils.elementHasZeroArea = function(a) {
   return a.right - a.left && b ? !1 : !0
 };
 axs.utils.elementIsOutsideScrollArea = function(a) {
-  a = a.getBoundingClientRect();
-  var b = document.body.scrollWidth, c = document.body.scrollTop, d = document.body.scrollLeft;
-  return a.top >= document.body.scrollHeight || a.bottom <= -c || a.left >= b || a.right <= -d ? !0 : !1
+  for(var b = a.parentElement, c = a.ownerDocument.defaultView;b != c.document.body;) {
+    if(axs.utils.isClippedBy(a, b)) {
+      return!0
+    }
+    if(axs.utils.canScrollTo(a, b) && !axs.utils.elementIsOutsideScrollArea(b)) {
+      return!1
+    }
+    b = b.parentElement
+  }
+  return!axs.utils.canScrollTo(a, c.document.body)
+};
+axs.utils.canScrollTo = function(a, b) {
+  var c = a.getBoundingClientRect(), d = b.getBoundingClientRect(), e = d.top, f = d.left, g = e - b.scrollTop, e = e - b.scrollTop + b.scrollHeight, h = f - b.scrollLeft + b.scrollWidth;
+  if(c.right < f - b.scrollLeft || c.bottom < g || c.left > h || c.top > e) {
+    return!1
+  }
+  f = a.ownerDocument.defaultView;
+  g = f.getComputedStyle(b);
+  return c.left > d.right || c.top > d.bottom ? "scroll" == g.overflow || "auto" == g.overflow || b instanceof f.HTMLBodyElement : !0
+};
+axs.utils.isClippedBy = function(a, b) {
+  var c = a.getBoundingClientRect(), d = b.getBoundingClientRect(), e = d.top - b.scrollTop, f = d.left - b.scrollLeft, g = a.ownerDocument.defaultView.getComputedStyle(b);
+  return(c.right < d.left || c.bottom < d.top || c.left > d.right || c.top > d.bottom) && "hidden" == g.overflow ? !0 : c.right < f || c.bottom < e ? "visible" != g.overflow : !1
 };
 axs.utils.isAncestor = function(a, b) {
   return null == b ? !1 : b === a ? !0 : axs.utils.isAncestor(a, b.parentNode)
 };
-axs.utils.overlappingElement = function(a) {
+axs.utils.overlappingElements = function(a) {
   if(axs.utils.elementHasZeroArea(a)) {
     return null
   }
-  var b = a.getBoundingClientRect(), b = document.elementFromPoint((b.left + b.right) / 2, (b.top + b.bottom) / 2);
-  return null == b || b == a || axs.utils.isAncestor(b, a) || axs.utils.isAncestor(a, b) ? null : b
+  for(var b = [], c = a.getClientRects(), d = 0;d < c.length;d++) {
+    var e = c[d], e = document.elementFromPoint((e.left + e.right) / 2, (e.top + e.bottom) / 2);
+    if(null != e && e != a && !axs.utils.isAncestor(e, a) && !axs.utils.isAncestor(a, e)) {
+      var f = window.getComputedStyle(e, null);
+      f && (f = axs.utils.getBgColor(f, e)) && 0 < f.alpha && 0 > b.indexOf(e) && b.push(e)
+    }
+  }
+  return b
 };
 axs.utils.elementIsHtmlControl = function(a) {
   var b = a.ownerDocument.defaultView;
@@ -565,16 +591,7 @@ axs.utils.elementIsAriaWidget = function(a) {
   return a.hasAttribute("role") && (a = a.getAttribute("role")) && (a = axs.constants.ARIA_ROLES[a]) && "widget" in a.allParentRolesSet ? !0 : !1
 };
 axs.utils.elementIsVisible = function(a) {
-  if(axs.utils.elementIsTransparent(a) || axs.utils.elementHasZeroArea(a) || axs.utils.elementIsOutsideScrollArea(a)) {
-    return!1
-  }
-  if(a = axs.utils.overlappingElement(a)) {
-    var b = window.getComputedStyle(a, null);
-    if(b && (a = axs.utils.getBgColor(b, a)) && 0 < a.alpha) {
-      return!1
-    }
-  }
-  return!0
+  return axs.utils.elementIsTransparent(a) || axs.utils.elementHasZeroArea(a) || axs.utils.elementIsOutsideScrollArea(a) || axs.utils.overlappingElements(a).length ? !1 : !0
 };
 axs.utils.isLargeFont = function(a) {
   var b = a.fontSize;
@@ -596,7 +613,7 @@ axs.utils.isLargeFont = function(a) {
     return b = parseInt(c[1], 10), a && 120 <= b || 150 <= b ? !0 : !1
   }
   if(c = b.match(/(\d+)pt/)) {
-    if(b = parseInt(c[1], 10), a && 14 <= b || 14 <= b) {
+    if(b = parseInt(c[1], 10), a && 14 <= b || 18 <= b) {
       return!0
     }
   }
@@ -811,11 +828,12 @@ axs.utils.isNativeTextElement = function(a) {
   }
 };
 axs.utils.isLowContrast = function(a, b, c) {
+  a = Math.round(10 * a) / 10;
   return c ? 4.5 > a || !axs.utils.isLargeFont(b) && 7 > a : 3 > a || !axs.utils.isLargeFont(b) && 4.5 > a
 };
 axs.utils.hasLabel = function(a) {
   var b = a.tagName.toLowerCase(), c = a.type ? a.type.toLowerCase() : "";
-  if(a.hasAttribute("aria-label") || a.hasAttribute("title") || "img" == b && a.hasAttribute("alt") || "input" == b && "image" == c && a.hasAttribute("alt") || "input" == b && ("submit" == c || "reset" == c) || a.hasAttribute("aria-labelledby") || axs.utils.isNativeTextElement(a) && a.hasAttribute("placeholder") || a.hasAttribute("id") && 0 < document.querySelectorAll("label[for=" + a.id + "]").length) {
+  if(a.hasAttribute("aria-label") || a.hasAttribute("title") || "img" == b && a.hasAttribute("alt") || "input" == b && "image" == c && a.hasAttribute("alt") || "input" == b && ("submit" == c || "reset" == c) || a.hasAttribute("aria-labelledby") || axs.utils.isNativeTextElement(a) && a.hasAttribute("placeholder") || a.hasAttribute("id") && 0 < document.querySelectorAll('label[for="' + a.id + '"]').length) {
     return!0
   }
   for(b = a.parentElement;b;) {
@@ -997,8 +1015,36 @@ axs.utils.getQuerySelectorText = function(a) {
 axs.properties = {};
 axs.properties.TEXT_CONTENT_XPATH = './/text()[normalize-space(.)!=""]/parent::*[name()!="script"]';
 axs.properties.getFocusProperties = function(a) {
-  a = a.getAttribute("tabindex");
-  return void 0 != a ? {tabindex:{value:a, valid:!0}} : null
+  var b = {}, c = a.getAttribute("tabindex");
+  void 0 != c ? b.tabindex = {value:c, valid:!0} : axs.utils.isElementImplicitlyFocusable(a) && (b.implicitlyFocusable = {value:!0, valid:!0});
+  if(0 == Object.keys(b).length) {
+    return null
+  }
+  var d = axs.utils.elementIsTransparent(a), e = axs.utils.elementHasZeroArea(a), f = axs.utils.elementIsOutsideScrollArea(a), g = axs.utils.overlappingElements(a);
+  if(d || e || f || 0 < g.length) {
+    var c = axs.utils.isElementOrAncestorHidden(a), h = {value:!1, valid:c};
+    d && (h.transparent = !0);
+    e && (h.zeroArea = !0);
+    f && (h.outsideScrollArea = !0);
+    g && 0 < g.length && (h.overlappingElements = g);
+    d = {value:c, valid:c};
+    c && (d.reason = axs.properties.getHiddenReason(a));
+    h.hidden = d;
+    b.visible = h
+  }else {
+    b.visible = {value:!0, valid:!0}
+  }
+  return b
+};
+axs.properties.getHiddenReason = function(a) {
+  if(!(a && a instanceof a.ownerDocument.defaultView.HTMLElement)) {
+    return null
+  }
+  if(a.hasAttribute("chromevoxignoreariahidden")) {
+    var b = !0
+  }
+  var c = window.getComputedStyle(a, null);
+  return"none" == c.display ? {property:"display: none", on:a} : "hidden" == c.visibility ? {property:"visibility: hidden", on:a} : a.hasAttribute("aria-hidden") && "true" == a.getAttribute("aria-hidden").toLowerCase() && !b ? {property:"aria-hidden", on:a} : axs.properties.getHiddenReason(a.parentElement)
 };
 axs.properties.getColorProperties = function(a) {
   var b = {};
@@ -1034,77 +1080,75 @@ axs.properties.getContrastRatioProperties = function(a) {
   (c = axs.utils.suggestColors(d, e, a, c)) && Object.keys(c).length && (b.suggestedColors = c);
   return b
 };
-axs.properties.findTextAlternatives = function(a, b, c) {
-  var d = c || !1;
+axs.properties.findTextAlternatives = function(a, b, c, d) {
+  var e = c || !1;
   c = axs.utils.asElement(a);
-  if(!c || !d && axs.utils.isElementOrAncestorHidden(c)) {
+  if(!c || !e && !d && axs.utils.isElementOrAncestorHidden(c)) {
     return null
   }
   if(a.nodeType == Node.TEXT_NODE) {
     return c = {type:"text"}, c.text = a.textContent, c.lastWord = axs.properties.getLastWord(c.text), b.content = c, a.textContent
   }
   a = null;
-  d || (a = axs.properties.getTextFromAriaLabelledby(c, b));
-  if(c.hasAttribute("aria-label")) {
-    var e = {type:"text"};
-    e.text = c.getAttribute("aria-label");
-    e.lastWord = axs.properties.getLastWord(e.text);
-    a ? e.unused = !0 : d && axs.utils.elementIsHtmlControl(c) || (a = e.text);
-    b.ariaLabel = e
-  }
-  c.hasAttribute("role") && "presentation" == c.getAttribute("role") || (a = axs.properties.getTextFromHostLangaugeAttributes(c, b, a));
-  if(d && axs.utils.elementIsHtmlControl(c)) {
-    e = c.ownerDocument.defaultView;
-    if(c instanceof e.HTMLInputElement) {
+  e || (a = axs.properties.getTextFromAriaLabelledby(c, b));
+  c.hasAttribute("aria-label") && (d = {type:"text"}, d.text = c.getAttribute("aria-label"), d.lastWord = axs.properties.getLastWord(d.text), a ? d.unused = !0 : e && axs.utils.elementIsHtmlControl(c) || (a = d.text), b.ariaLabel = d);
+  c.hasAttribute("role") && "presentation" == c.getAttribute("role") || (a = axs.properties.getTextFromHostLanguageAttributes(c, b, a, e));
+  if(e && axs.utils.elementIsHtmlControl(c)) {
+    d = c.ownerDocument.defaultView;
+    if(c instanceof d.HTMLInputElement) {
       var f = c;
       "text" == f.type && f.value && 0 < f.value.length && (b.controlValue = {text:f.value});
       "range" == f.type && (b.controlValue = {text:f.value})
     }
-    c instanceof e.HTMLSelectElement && (b.controlValue = {text:f.value});
-    b.controlValue && (f = b.controlValue, a ? f.unused = !0 : a = f.text)
+    c instanceof d.HTMLSelectElement && (b.controlValue = {text:c.value});
+    b.controlValue && (d = b.controlValue, a ? d.unused = !0 : a = d.text)
   }
-  if(d && axs.utils.elementIsAriaWidget(c)) {
-    d = c.getAttribute("role");
-    "textbox" == d && c.textContent && 0 < c.textContent.length && (b.controlValue = {text:c.textContent});
-    if("slider" == d || "spinbutton" == d) {
+  if(e && axs.utils.elementIsAriaWidget(c)) {
+    e = c.getAttribute("role");
+    "textbox" == e && c.textContent && 0 < c.textContent.length && (b.controlValue = {text:c.textContent});
+    if("slider" == e || "spinbutton" == e) {
       c.hasAttribute("aria-valuetext") ? b.controlValue = {text:c.getAttribute("aria-valuetext")} : c.hasAttribute("aria-valuenow") && (b.controlValue = {value:c.getAttribute("aria-valuenow"), text:"" + c.getAttribute("aria-valuenow")})
     }
-    if("menu" == d) {
-      for(var g = c.querySelectorAll("[role=menuitemcheckbox], [role=menuitemradio]"), f = [], e = 0;e < g.length;e++) {
-        "true" == g[e].getAttribute("aria-checked") && f.push(g[e])
+    if("menu" == e) {
+      var g = c.querySelectorAll("[role=menuitemcheckbox], [role=menuitemradio]");
+      d = [];
+      for(f = 0;f < g.length;f++) {
+        "true" == g[f].getAttribute("aria-checked") && d.push(g[f])
       }
-      if(0 < f.length) {
+      if(0 < d.length) {
         g = "";
-        for(e = 0;e < f.length;e++) {
-          g += axs.properties.findTextAlternatives(f[e], {}, !0), e < f.length - 1 && (g += ", ")
+        for(f = 0;f < d.length;f++) {
+          g += axs.properties.findTextAlternatives(d[f], {}, !0), f < d.length - 1 && (g += ", ")
         }
         b.controlValue = {text:g}
       }
     }
-    if("combobox" == d || "select" == d) {
+    if("combobox" == e || "select" == e) {
       b.controlValue = {text:"TODO"}
     }
-    b.controlValue && (f = b.controlValue, a ? f.unused = !0 : a = f.text)
+    b.controlValue && (d = b.controlValue, a ? d.unused = !0 : a = d.text)
   }
-  if(d = axs.properties.getTextFromDescendantContent(c)) {
-    f = {type:"text"}, f.text = d, f.lastWord = axs.properties.getLastWord(f.text), a ? f.unused = !0 : a = d, b.content = f
-  }
-  c.hasAttribute("title") && (d = {type:"string", valid:!0}, d.text = c.getAttribute("title"), d.lastWord = axs.properties.getLastWord(d.lastWord), a ? d.unused = !0 : a = d.text, b.title = d);
+  d = !0;
+  c.hasAttribute("role") && (e = c.getAttribute("role"), (e = axs.constants.ARIA_ROLES[e]) && (!e.namefrom || 0 > e.namefrom.indexOf("contents")) && (d = !1));
+  (e = axs.properties.getTextFromDescendantContent(c)) && d && (d = {type:"text"}, d.text = e, d.lastWord = axs.properties.getLastWord(d.text), a ? d.unused = !0 : a = e, b.content = d);
+  c.hasAttribute("title") && (e = {type:"string", valid:!0}, e.text = c.getAttribute("title"), e.lastWord = axs.properties.getLastWord(e.lastWord), a ? e.unused = !0 : a = e.text, b.title = e);
   return 0 == Object.keys(b).length && null == a ? null : a
 };
 axs.properties.getTextFromDescendantContent = function(a) {
-  if(a.hasAttribute("role")) {
-    var b = a.getAttribute("role");
-    if((b = axs.constants.ARIA_ROLES[b]) && (!b.namefrom || 0 > b.namefrom.indexOf("contents"))) {
-      return null
+  var b = a.childNodes;
+  a = [];
+  for(var c = 0;c < b.length;c++) {
+    var d = axs.properties.findTextAlternatives(b[c], {}, !0);
+    d && a.push(d.trim())
+  }
+  if(a.length) {
+    b = "";
+    for(c = 0;c < a.length;c++) {
+      b = [b, a[c]].join(" ").trim()
     }
+    return b
   }
-  a = a.childNodes;
-  for(var b = [], c = 0;c < a.length;c++) {
-    var d = axs.properties.findTextAlternatives(a[c], {}, !0);
-    d && 0 < d.trim().length && b.push(d.trim())
-  }
-  return b.length ? b.join(" ") : null
+  return null
 };
 axs.properties.getTextFromAriaLabelledby = function(a, b) {
   var c = null;
@@ -1121,20 +1165,21 @@ axs.properties.getTextFromAriaLabelledby = function(a, b) {
   0 < g.length && (g[g.length - 1].last = !0, e.values = g, e.text = f.join(" "), e.lastWord = axs.properties.getLastWord(e.text), c = e.text, b.ariaLabelledby = e);
   return c
 };
-axs.properties.getTextFromHostLangaugeAttributes = function(a, b, c) {
+axs.properties.getTextFromHostLanguageAttributes = function(a, b, c, d) {
   if(axs.browserUtils.matchSelector(a, "img")) {
     if(a.hasAttribute("alt")) {
-      var d = {type:"string", valid:!0};
-      d.text = a.getAttribute("alt");
-      c ? d.unused = !0 : c = d.text;
-      b.alt = d
+      var e = {type:"string", valid:!0};
+      e.text = a.getAttribute("alt");
+      c ? e.unused = !0 : c = e.text;
+      b.alt = e
     }else {
-      d = {valid:!1, errorMessage:"No alt value provided"}, b.alt = d, d = a.src, "string" == typeof d && (c = d.split("/").pop(), b.filename = {text:c})
+      e = {valid:!1, errorMessage:"No alt value provided"}, b.alt = e, e = a.src, "string" == typeof e && (c = e.split("/").pop(), b.filename = {text:c})
     }
   }
-  if(axs.browserUtils.matchSelector(a, 'input:not([type="hidden"]):not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), video:not([disabled])')) {
+  if(axs.browserUtils.matchSelector(a, 'input:not([type="hidden"]):not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), video:not([disabled])') && !d) {
     if(a.hasAttribute("id")) {
-      for(var d = document.querySelectorAll("label[for=" + a.id + "]"), e = {}, f = [], g = [], h = 0;h < d.length;h++) {
+      d = document.querySelectorAll('label[for="' + a.id + '"]');
+      for(var e = {}, f = [], g = [], h = 0;h < d.length;h++) {
         var k = {type:"element"}, m = d[h], l = axs.properties.findTextAlternatives(m, {}, !0);
         l && 0 < l.trim().length && (k.text = l.trim(), g.push(l.trim()));
         k.element = m;
@@ -1167,7 +1212,7 @@ axs.properties.getLastWord = function(a) {
 };
 axs.properties.getTextProperties = function(a) {
   var b = {};
-  a = axs.properties.findTextAlternatives(a, b);
+  a = axs.properties.findTextAlternatives(a, b, !1, !0);
   if(0 == Object.keys(b).length) {
     if(!a) {
       return null
@@ -1292,28 +1337,31 @@ axs.AuditRule.collectMatchingElements = function(a, b, c) {
     axs.AuditRule.collectMatchingElements(a, b, c), a = a.nextSibling
   }
 };
-axs.AuditRule.prototype.run = function(a, b) {
-  var c = a || [], d = [];
-  axs.AuditRule.collectMatchingElements(b || document, this.relevantElementMatcher_, d);
+axs.AuditRule.prototype.run = function(a) {
+  a = a || {};
+  var b = "ignoreSelectors" in a ? a.ignoreSelectors : [], c = "maxResults" in a ? a.maxResults : null, d = [];
+  axs.AuditRule.collectMatchingElements("scope" in a ? a.scope : document, this.relevantElementMatcher_, d);
   var e = [];
   if(!d.length) {
     return{result:axs.constants.AuditResult.NA}
   }
-  for(var f = 0;f < d.length;f++) {
-    var g = d[f], h;
+  for(a = 0;a < d.length && !(null != c && e.length >= c);a++) {
+    var f = d[a], g;
     a: {
-      h = g;
-      for(var k = 0;k < c.length;k++) {
-        if(axs.browserUtils.matchSelector(h, c[k])) {
-          h = !0;
+      g = f;
+      for(var h = 0;h < b.length;h++) {
+        if(axs.browserUtils.matchSelector(g, b[h])) {
+          g = !0;
           break a
         }
       }
-      h = !1
+      g = !1
     }
-    !h && this.test_(g) && this.addElement(e, g)
+    !g && this.test_(f) && this.addElement(e, f)
   }
-  return{result:e.length ? axs.constants.AuditResult.FAIL : axs.constants.AuditResult.PASS, elements:e}
+  b = {result:e.length ? axs.constants.AuditResult.FAIL : axs.constants.AuditResult.PASS, elements:e};
+  a < d.length && (b.resultsTruncated = !0);
+  return b
 };
 axs.AuditRule.specs = {};
 axs.AuditRules = {};
@@ -1370,7 +1418,7 @@ goog.exportProperty(axs.AuditResults.prototype, "toString", axs.AuditResults.pro
 axs.Audit = {};
 axs.AuditConfiguration = function() {
   this.rules_ = {};
-  this.auditRulesToIgnore = this.auditRulesToRun = this.scope = null;
+  this.maxResults = this.auditRulesToIgnore = this.auditRulesToRun = this.scope = null;
   this.withConsoleApi = !1;
   goog.exportProperty(this, "scope", this.scope);
   goog.exportProperty(this, "auditRulesToRun", this.auditRulesToRun);
@@ -1384,6 +1432,11 @@ axs.AuditConfiguration.prototype = {ignoreSelectors:function(a, b) {
   Array.prototype.push.call(this.rules_[a].ignore, b)
 }, getIgnoreSelectors:function(a) {
   return a in this.rules_ && "ignore" in this.rules_[a] ? this.rules_[a].ignore : []
+}, setSeverity:function(a, b) {
+  a in this.rules_ || (this.rules_[a] = {});
+  this.rules_[a].severity = b
+}, getSeverity:function(a) {
+  return a in this.rules_ && "severity" in this.rules_[a] ? this.rules_[a].severity : null
 }};
 goog.exportProperty(axs.AuditConfiguration.prototype, "ignoreSelectors", axs.AuditConfiguration.prototype.ignoreSelectors);
 goog.exportProperty(axs.AuditConfiguration.prototype, "getIgnoreSelectors", axs.AuditConfiguration.prototype.getIgnoreSelectors);
@@ -1398,13 +1451,19 @@ axs.Audit.run = function(a) {
     }
   }
   for(e = 0;e < d.length;e++) {
-    if((f = axs.AuditRules.getRule(d[e])) && !f.disabled && (b || !f.requiresConsoleAPI)) {
-      var g = [], h = a.getIgnoreSelectors(f.name);
-      (0 < h.length || a.scope) && g.push(h);
-      a.scope && g.push(a.scope);
-      g = f.run.apply(f, g);
-      g.rule = axs.utils.namedValues(f);
-      c.push(g)
+    var f = d[e], g = axs.AuditRules.getRule(f);
+    if(g && !g.disabled && (b || !g.requiresConsoleAPI)) {
+      var h = {}, k = a.getIgnoreSelectors(g.name);
+      if(0 < k.length || a.scope) {
+        h.ignoreSelectors = k
+      }
+      a.scope && (h.scope = a.scope);
+      a.maxResults && (h.maxResults = a.maxResults);
+      h = g.run.call(g, h);
+      g = axs.utils.namedValues(g);
+      g.severity = a.getSeverity(f) || g.severity;
+      h.rule = g;
+      c.push(h)
     }
   }
   return c
@@ -1497,7 +1556,11 @@ axs.AuditRule.specs.focusableElementNotVisibleAndNotAriaHidden = {name:"focusabl
   }
   return!0
 }, test:function(a) {
-  return axs.utils.isElementOrAncestorHidden(a) ? !1 : !axs.utils.elementIsVisible(a)
+  if(axs.utils.isElementOrAncestorHidden(a)) {
+    return!1
+  }
+  a.focus();
+  return!axs.utils.elementIsVisible(a)
 }, code:"AX_FOCUS_01"};
 axs.AuditRule.specs.imagesWithoutAltText = {name:"imagesWithoutAltText", heading:"Images should have an alt attribute", url:"https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#-ax_text_02--images-should-have-an-alt-attribute-unless-they-have-an-aria-role-of-presentation", severity:axs.constants.Severity.WARNING, relevantElementMatcher:function(a) {
   return axs.browserUtils.matchSelector(a, "img") && !axs.utils.isElementOrAncestorHidden(a)
@@ -1521,7 +1584,7 @@ axs.AuditRule.specs.mainRoleOnInappropriateElement = {name:"mainRoleOnInappropri
   if(axs.utils.isInlineElement(a)) {
     return!0
   }
-  a = axs.properties.findTextAlternatives(a, {});
+  a = axs.properties.getTextFromDescendantContent(a);
   return!a || 50 > a.length ? !0 : !1
 }, code:"AX_ARIA_04"};
 axs.AuditRule.specs.elementsWithMeaningfulBackgroundImage = {name:"elementsWithMeaningfulBackgroundImage", severity:axs.constants.Severity.WARNING, relevantElementMatcher:function(a) {
@@ -1573,14 +1636,12 @@ axs.AuditRule.specs.requiredAriaAttributeMissing = {name:"requiredAriaAttributeM
   }
 }, code:"AX_ARIA_03"};
 axs.AuditRule.specs.unfocusableElementsWithOnClick = {name:"unfocusableElementsWithOnClick", heading:"Elements with onclick handlers must be focusable", url:"https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#-ax_focus_02--elements-with-onclick-handlers-must-be-focusable", severity:axs.constants.Severity.WARNING, opt_requiresConsoleAPI:!0, relevantElementMatcher:function(a) {
-  return a instanceof a.ownerDocument.defaultView.HTMLBodyElement || axs.utils.isElementOrAncestorHidden(a) && "selected" == a.className ? !1 : "click" in getEventListeners(a) ? !0 : !1
+  return a instanceof a.ownerDocument.defaultView.HTMLBodyElement || axs.utils.isElementOrAncestorHidden(a) ? !1 : "click" in getEventListeners(a) ? !0 : !1
 }, test:function(a) {
-  return!a.hasAttribute("tabindex") && !axs.utils.isElementImplicitlyFocusable(a)
+  return!a.hasAttribute("tabindex") && !axs.utils.isElementImplicitlyFocusable(a) && !a.disabled
 }, code:"AX_FOCUS_02"};
 axs.AuditRule.specs.videoWithoutCaptions = {name:"videoWithoutCaptions", heading:"Video elements should use <track> elements to provide captions", url:"https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#-ax_video_01--video-elements-should-use-track-elements-to-provide-captions", severity:axs.constants.Severity.WARNING, relevantElementMatcher:function(a) {
   return axs.browserUtils.matchSelector(a, "video")
 }, test:function(a) {
   return!a.querySelectorAll("track[kind=captions]").length
 }, code:"AX_VIDEO_01"};
-
-
