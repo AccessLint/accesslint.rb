@@ -1,17 +1,3 @@
-Copyright 2013 Google Inc. All Rights Reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
 # Accessibility Developer Tools
 
 This is a library of accessibility-related testing and utility code.
@@ -22,6 +8,42 @@ There is also a collection of accessibility-related utility code, including but 
 * contrast ratio calculation and color suggestions
 * retrieving and validating ARIA attributes and states
 * accessible name calculation using the algorithm at [http://www.w3.org/TR/wai-aria/roles#textalternativecomputation](http://www.w3.org/TR/wai-aria/roles#textalternativecomputation)
+
+# Getting the code
+
+To include just the javascript rules, require the following file:
+
+    https://raw.github.com/GoogleChrome/accessibility-developer-tools/stable/dist/js/axs_testing.js
+
+  `git 1.6.5` or later:
+
+    % git clone --recursive https://github.com/GoogleChrome/accessibility-developer-tools.git
+
+  Before `git 1.6.5`:
+
+    % git clone https://github.com/GoogleChrome/accessibility-developer-tools.git
+    % cd accessibility-developer-tools
+    % git submodule init; git submodule update
+
+# Building
+
+You will need `node` and `grunt-cli` to build.
+
+1. (Once only) Install [Node.js](http://nodejs.org/) and `npm` - useful instructions here: [https://gist.github.com/isaacs/579814](https://gist.github.com/isaacs/579814)
+
+    Make sure you have Node.js v 0.8 or higher.
+
+2. (Once only) Use `npm` to install `grunt-cli`
+
+        % npm install -g grunt-cli  # May need to be run as root
+
+3. (Every time you make a fresh checkout) Install dependencies (including `grunt`) for this project (run from project root)
+
+        % npm install
+
+4. Build using `grunt` (run from project root)
+
+        % grunt
 
 # Using the Audit API
 
@@ -45,6 +67,14 @@ Once you have included `axs_testing.js`, you can call call `axs.Audit.run()`. Th
       /** @type {axs.AuditRule} */
       rule  // The rule which this result is for.
     }
+
+### Command Line Runner
+
+The Accessibility Developer Tools project includes a command line runner for the audit. To use the runner, [install phantomjs](http://phantomjs.org/download.html) then run the following command from the project root directory.
+
+    $ phantomjs tools/runner/audit.js <url-or-filepath>
+
+The runner will load the specified file or URL in a headless browser, inject axs_testing.js, run the audit and output the report text.
 
 ## Using the results
 
@@ -125,3 +155,19 @@ You can set a `scope` on the `AuditConfiguration` object like this:
     var configuration = new axs.AuditConfiguration();
     configuration.scope = document.querySelector('main');  // or however you wish to choose your scope element
     axs.Audit.run(configuration);
+
+## License
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
