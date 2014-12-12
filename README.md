@@ -1,4 +1,4 @@
-# access_lint [![Build Status](https://travis-ci.org/ckundo/access_lint.svg)](https://travis-ci.org/ckundo/access_lint) [![Gem Version](https://badge.fury.io/rb/access_lint.svg)](http://badge.fury.io/rb/access_lint) [![Code Climate](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/badges/5a971515dcfd43cf57e1/gpa.svg)](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/feed) [![Coverage Status](https://coveralls.io/repos/ckundo/access_lint/badge.png?branch=master)](https://coveralls.io/r/ckundo/access_lint?branch=master)
+# access_lint [![Build Status](https://travis-ci.org/accesslint/access_lint.svg)](https://travis-ci.org/accesslint/access_lint) [![Gem Version](https://badge.fury.io/rb/access_lint.svg)](http://badge.fury.io/rb/access_lint) [![Code Climate](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/badges/5a971515dcfd43cf57e1/gpa.svg)](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/feed) [![Coverage Status](https://coveralls.io/repos/ckundo/access_lint/badge.png?branch=master)](https://coveralls.io/r/ckundo/access_lint?branch=master)
 
 Run web accessibility audits on urls or files, from the command line or within Ruby.
 
@@ -9,7 +9,7 @@ AccessLint uses the [Accessibility Developer Tools](https://github.com/GoogleChr
 ## Installation
 
 First, install PhantomJS ([full guide](http://phantomjs.org/)). On OS X:
-    
+
     $ brew install phantomjs
 
 Then install the rubygem:
@@ -28,7 +28,7 @@ From the command line, specify a url or filename to be audited:
 ### Ruby
 
 Run the audit from a Ruby application like so
-    
+
     $ irb
     > require 'access_lint'
     => true
@@ -39,12 +39,12 @@ Run the audit from a Ruby application like so
 
     {
         "PASS": [                                                           # Status group
-            { 
+            {
                 "element_names": ["<p class=\"foo\">relevant element</p>"], # applicable DOM elements
                 "severity": "WARNING",                                      # 'WARNING' or 'SEVERE'
                 "status": "PASS",                                           # 'PASS', 'FAIL', or 'NA'
                 "title": "Some description"                                 # rule description
-            }, 
+            },
             { ... }
         ],
         "NA": [ { ... } ],
