@@ -12,9 +12,9 @@ module AccessLint
       return if audit_success?
 
       if !phantomjs_installed?
-        raise AccessLint::RunnerError.new("Please install PhantomJS. Visit http://phantomjs.org/ for instructions.")
+        fail AccessLint::RunnerError.new("Please install PhantomJS. Visit http://phantomjs.org/ for instructions.")
       else
-        raise AccessLint::RunnerError.new("PhantomJS exited without success: #{@output}")
+        fail AccessLint::RunnerError.new("PhantomJS exited without success: #{@output}")
       end
     end
 
