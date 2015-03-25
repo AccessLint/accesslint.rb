@@ -55,19 +55,22 @@ Run the audit from a Ruby application like so
 
 For full descriptions of the audit rules, visit the [Accessibility Developer Tools project wiki](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules)
 
-* Audio elements should have controls
+* An element's ID must not be present in more that one aria-owns attribute at any time
+* ARIA attributes which refer to other elements by ID should refer to elements which exist in the DOM
+* aria-owns should not be used if ownership is implicit in the DOM
 * ARIA state and property values must be valid
-* Elements with ARIA roles must use a valid, non-abstract ARIA role
+* Audio elements should have controls
+* Avoid positive integer values for tabIndex
 * Controls and media elements should have labels
-* These elements are focusable but either invisible or obscured by another element
-* Images should have an alt attribute
-* The purpose of each link should be clear from the link text
-* Text elements should have a reasonable contrast ratio
-* role=main should only appear on significant elements
-* Meaningful images should not be used in element backgrounds
-* aria-labelledby attributes should refer to an element which exists in the DOM
-* The web page should have a title that describes topic or purpose
 * Elements with ARIA roles must have all required attributes for that role
+* Elements with ARIA roles must use a valid, non-abstract ARIA role
+* Images should have an alt attribute
+* Meaningful images should not be used in element backgrounds
+* role=main should only appear on significant elements
+* The purpose of each link should be clear from the link text
+* The web page should have a title that describes topic or purpose
+* The web page should have the content's human language indicated in the markup
+* Text elements should have a reasonable contrast ratio
 * Video elements should use <track> elements to provide captions
 
 ## Roadmap
