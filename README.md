@@ -55,20 +55,25 @@ Run the audit from a Ruby application like so
 
 For full descriptions of the audit rules, visit the [Accessibility Developer Tools project wiki](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules)
 
-* Audio elements should have controls
-* ARIA state and property values must be valid
-* Elements with ARIA roles must use a valid, non-abstract ARIA role
-* Controls and media elements should have labels
-* These elements are focusable but either invisible or obscured by another element
-* Images should have an alt attribute
-* The purpose of each link should be clear from the link text
-* Text elements should have a reasonable contrast ratio
-* role=main should only appear on significant elements
-* Meaningful images should not be used in element backgrounds
-* aria-labelledby attributes should refer to an element which exists in the DOM
-* The web page should have a title that describes topic or purpose
-* Elements with ARIA roles must have all required attributes for that role
-* Video elements should use <track> elements to provide captions
+Code        | Title
+------------|------------------------------------------------------------------
+AX_ARIA_01  | Elements with ARIA roles must use a valid, non-abstract ARIA role
+AX_ARIA_02  | ARIA attributes which refer to other elements by ID should refer to elements which exist in the DOM
+AX_ARIA_03  | Elements with ARIA roles must have all required attributes for that role
+AX_ARIA_04  | ARIA state and property values must be valid
+AX_ARIA_05  | role=main should only appear on significant elements
+AX_ARIA_06  | aria-owns should not be used if ownership is implicit in the DOM
+AX_ARIA_07  | An element's ID must not be present in more that one aria-owns attribute at any time
+AX_AUDIO_01 | Audio elements should have controls
+AX_COLOR_01 | Text elements should have a reasonable contrast ratio
+AX_FOCUS_03 | Avoid positive integer values for tabIndex
+AX_HTML_01  | The web page should have the content's human language indicated in the markup
+AX_IMAGE_01 | Meaningful images should not be used in element backgrounds
+AX_TEXT_01  | Controls and media elements should have labels
+AX_TEXT_02  | Images should have an alt attribute
+AX_TEXT_04  | The purpose of each link should be clear from the link text
+AX_TITLE_01 | The web page should have a title that describes topic or purpose
+AX_VIDEO_01 | Video elements should use <track> elements to provide captions
 
 ## Roadmap
 
