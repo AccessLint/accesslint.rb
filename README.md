@@ -53,27 +53,45 @@ Run the audit from a Ruby application like so
 
 ## Rules
 
-For full descriptions of the audit rules, visit the [Accessibility Developer Tools project wiki](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules)
+For full descriptions of the audit rules, visit the [Accessibility Developer Tools project wiki](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules).
 
-Code        | Title
-------------|------------------------------------------------------------------
-AX_ARIA_01  | Elements with ARIA roles must use a valid, non-abstract ARIA role
-AX_ARIA_02  | ARIA attributes which refer to other elements by ID should refer to elements which exist in the DOM
-AX_ARIA_03  | Elements with ARIA roles must have all required attributes for that role
-AX_ARIA_04  | ARIA state and property values must be valid
-AX_ARIA_05  | role=main should only appear on significant elements
-AX_ARIA_06  | aria-owns should not be used if ownership is implicit in the DOM
-AX_ARIA_07  | An element's ID must not be present in more that one aria-owns attribute at any time
-AX_AUDIO_01 | Audio elements should have controls
-AX_COLOR_01 | Text elements should have a reasonable contrast ratio
-AX_FOCUS_03 | Avoid positive integer values for tabIndex
-AX_HTML_01  | The web page should have the content's human language indicated in the markup
-AX_IMAGE_01 | Meaningful images should not be used in element backgrounds
-AX_TEXT_01  | Controls and media elements should have labels
-AX_TEXT_02  | Images should have an alt attribute
-AX_TEXT_04  | The purpose of each link should be clear from the link text
-AX_TITLE_01 | The web page should have a title that describes topic or purpose
-AX_VIDEO_01 | Video elements should use <track> elements to provide captions
+Code                       | Title
+---------------------------|----------------------------------------------------
+[AX_ARIA_01][AX_ARIA_01]   | Elements with ARIA roles must use a valid, non-abstract ARIA role.
+[AX_ARIA_02][AX_ARIA_02]   | ARIA attributes which refer to other elements by ID should refer to elements which exist in the DOM.
+[AX_ARIA_03][AX_ARIA_03]   | Elements with ARIA roles must have all required attributes for that role.
+[AX_ARIA_04][AX_ARIA_04]   | ARIA state and property values must be valid.
+[AX_ARIA_05][AX_ARIA_05]   | role=main should only appear on significant elements.
+[AX_ARIA_06][AX_ARIA_06]   | aria-owns should not be used if ownership is implicit in the DOM.
+[AX_ARIA_07][AX_ARIA_07]   | An element's ID must not be present in more that one aria-owns attribute at any time.
+[AX_AUDIO_01][AX_AUDIO_01] | Audio elements should have controls.
+[AX_COLOR_01][AX_COLOR_01] | Text elements should have a reasonable contrast ratio.
+[AX_FOCUS_03][AX_FOCUS_03] | Avoid positive integer values for tabIndex.
+[AX_HTML_01][AX_HTML_01]   | The web page should have the content's human language indicated in the markup.
+[AX_IMAGE_01][AX_IMAGE_01] | Meaningful images should not be used in element backgrounds.
+[AX_TEXT_01][AX_TEXT_01]   | Controls and media elements should have labels.
+[AX_TEXT_02][AX_TEXT_02]   | Images should have an alt attribute.
+[AX_TEXT_04][AX_TEXT_04]   | The purpose of each link should be clear from the link text.
+[AX_TITLE_01][AX_TITLE_01] | The web page should have a title that describes topic or purpose.
+[AX_VIDEO_01][AX_VIDEO_01] | Video elements should use <track> elements to provide captions.
+
+[AX_ARIA_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_01
+[AX_ARIA_02]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_02
+[AX_ARIA_03]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_03
+[AX_ARIA_04]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_04
+[AX_ARIA_05]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_05
+[AX_ARIA_06]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_06
+[AX_ARIA_07]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_07
+[AX_AUDIO_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_audio_01
+[AX_COLOR_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_color_01
+[AX_FOCUS_03]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_focus_03
+[AX_HTML_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_html_01
+[AX_IMAGE_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_image_01
+[AX_TEXT_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_text_01
+[AX_TEXT_02]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_text_02
+[AX_TEXT_04]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_text_04
+[AX_TITLE_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_title_01
+[AX_VIDEO_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_video_01
 
 ## Roadmap
 
