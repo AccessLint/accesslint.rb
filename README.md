@@ -64,10 +64,18 @@ Code                       | Title
 [AX_ARIA_05][AX_ARIA_05]   | role=main should only appear on significant elements.
 [AX_ARIA_06][AX_ARIA_06]   | aria-owns should not be used if ownership is implicit in the DOM.
 [AX_ARIA_07][AX_ARIA_07]   | An element's ID must not be present in more that one aria-owns attribute at any time.
+[AX_ARIA_08][AX_ARIA_08]   | Elements with ARIA roles must ensure required owned elements are present.
+[AX_ARIA_09][AX_ARIA_09]   | Elements with ARIA roles must be in the correct scope.
+[AX_ARIA_10][AX_ARIA_10]   | This element has an unsupported ARIA attribute.
+[AX_ARIA_11][AX_ARIA_11]   | This element has an invalid ARIA attribute.
+[AX_ARIA_12][AX_ARIA_12]   | This element does not support ARIA roles, states and properties.
 [AX_AUDIO_01][AX_AUDIO_01] | Audio elements should have controls.
 [AX_COLOR_01][AX_COLOR_01] | Text elements should have a reasonable contrast ratio.
+[AX_FOCUS_01][AX_FOCUS_01] | These elements are focusable but either invisible or obscured by another element.
+[AX_FOCUS_02][AX_FOCUS_02] | Elements with onclick handlers must be focusable.
 [AX_FOCUS_03][AX_FOCUS_03] | Avoid positive integer values for tabIndex.
 [AX_HTML_01][AX_HTML_01]   | The web page should have the content's human language indicated in the markup.
+[AX_HTML_02][AX_HTML_02]   | An element's ID must be unique in the DOM.
 [AX_IMAGE_01][AX_IMAGE_01] | Meaningful images should not be used in element backgrounds.
 [AX_TEXT_01][AX_TEXT_01]   | Controls and media elements should have labels.
 [AX_TEXT_02][AX_TEXT_02]   | Images should have an alt attribute.
@@ -82,10 +90,18 @@ Code                       | Title
 [AX_ARIA_05]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_05
 [AX_ARIA_06]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_06
 [AX_ARIA_07]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_07
+[AX_ARIA_08]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_08
+[AX_ARIA_09]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_09
+[AX_ARIA_10]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_10
+[AX_ARIA_11]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_11
+[AX_ARIA_12]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_aria_12
 [AX_AUDIO_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_audio_01
 [AX_COLOR_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_color_01
+[AX_FOCUS_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_focus_01
+[AX_FOCUS_02]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_focus_02
 [AX_FOCUS_03]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_focus_03
 [AX_HTML_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_html_01
+[AX_HTML_02]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_html_02
 [AX_IMAGE_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_image_01
 [AX_TEXT_01]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_text_01
 [AX_TEXT_02]: https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules#ax_text_02
