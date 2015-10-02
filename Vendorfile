@@ -1,3 +1,6 @@
 folder 'vendor/google-chrome/accessibility-developer-tools' do
-  file 'gen/axs_testing.js', 'https://raw.github.com/GoogleChrome/accessibility-developer-tools/stable/dist/js/axs_testing.js'
+  file(
+    'gen/axs_testing.js',
+    'https://raw.githubusercontent.com/GoogleChrome/accessibility-developer-tools/master/dist/js/axs_testing.js',
+  )
 end
