@@ -12,7 +12,7 @@ module AccessLint
       exit_code = 0
 
       if options[:output] == 'json'
-        puts Audit.new(target).run if options[:output] == 'json'
+        puts Audit.new(target).run.to_json if options[:output] == 'json'
       else
 
         report(message: "auditing #{target}", color: "blue") do
