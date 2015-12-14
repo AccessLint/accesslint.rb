@@ -8,7 +8,7 @@ module AccessLint
     end
 
     def run
-      @output = `phantomjs #{RUNNER_PATH} #{@target}`
+      @output = `phantomjs --ignore-ssl-errors=yes #{RUNNER_PATH} #{@target}`
       return if audit_success?
 
       if !phantomjs_installed?
