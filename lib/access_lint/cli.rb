@@ -7,38 +7,44 @@ module AccessLint
     include CommandLineReporter
 
     desc 'audit', 'audit TARGET'
+    option :output
     def audit(target)
       exit_code = 0
 
-      report(message: "auditing #{target}", color: "blue") do
-        results = Audit.new(target).run
+      if options[:output] == 'json'
+        puts Audit.new(target).run.to_json if options[:output] == 'json'
+      else
 
-        results.each do |group|
-          section = group[0]
+        report(message: "auditing #{target}", color: "blue") do
+          results = Audit.new(target).run
 
-          case section
-          when "NA"
-            color = :blue
-          when "PASS"
-            color = :green
-          when "FAIL"
-            color = :red
-          end
+          results.each do |group|
+            section = group[0]
 
-          group[1].each do |rule|
-            name = rule.fetch("title")
-            severity = rule.fetch("severity")
-            elements = rule.fetch("element_names")
-
-            puts
-            aligned("#{section} - #{name} (#{severity})", color: color)
-
-            elements.each do |element|
-              aligned("* #{element[0..80]}...")
+            case section
+            when "NA"
+              color = :blue
+            when "PASS"
+              color = :green
+            when "FAIL"
+              color = :red
             end
 
-            if section == "FAIL" && elements.any?
-              exit_code = 1
+            group[1].each do |rule|
+              name = rule.fetch("title")
+              severity = rule.fetch("severity")
+              elements = rule.fetch("element_names")
+
+              puts
+              aligned("#{section} - #{name} (#{severity})", color: color)
+
+              elements.each do |element|
+                aligned("* #{element[0..80]}...")
+              end
+
+              if section == "FAIL" && elements.any?
+                exit_code = 1
+              end
             end
           end
         end
