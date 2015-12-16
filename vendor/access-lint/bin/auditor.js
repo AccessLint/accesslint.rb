@@ -45,7 +45,9 @@ if (system.args.length !== 2) {
             title: raw_results[i]['rule']['heading'],
             severity: raw_results[i]['rule']['severity'],
             element_names: element_names,
-            elements: raw_results[i]['elements']
+            elements: raw_results[i]['elements'],
+            code: raw_results[i]['rule']['code'],
+            url: raw_results[i]['rule']['url']
           });
         }
 
