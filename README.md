@@ -1,3 +1,7 @@
+# DEPRECATED - use [accesslint.js](https://github.com/accesslint/accesslint) instead
+
+***
+
 # accesslint.rb [![Gem Version](https://badge.fury.io/rb/access_lint.svg)](http://badge.fury.io/rb/access_lint) [![Code Climate](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/badges/5a971515dcfd43cf57e1/gpa.svg)](https://codeclimate.com/repos/52c4c7ca6956804bb2000905/feed)
 
 Run web accessibility audits on urls or files, from the command line or within Ruby.
