@@ -1,4 +1,4 @@
-# DEPRECATED - use [accesslint.js](https://github.com/accesslint/accesslint) instead
+# DEPRECATED - use [accesslint.js](https://github.com/accesslint/accesslint.js) instead
 
 ***
 
